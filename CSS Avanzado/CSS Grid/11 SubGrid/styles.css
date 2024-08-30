@@ -1,0 +1,57 @@
+body{
+    font-family: sans-serif;
+}
+body,div{
+    box-sizing: border-box;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+    padding: 10px;
+    justify-items: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-evenly;
+    border: 2px solid #000;
+    margin: 20px;
+}
+.grid-item{
+    background-color: #48e;
+    color: #fff;
+    font-size: 60px;
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+}
+/*subgrid permite que un elemento se convierta en una subcuadrícula, lo que 
+significa que los elementos dentro de ese elemento subcuadrícula heredan las 
+líneas de cuadrícula del contenedor padre.*/
+.grid-item:first-child{
+    grid-area: 3/1/span 2/span 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    gap: 10px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.subgrid-item{
+    background-color: #e66;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+}
+.subgrid-item:first-child{
+    width: 350px;
+    background-color: #4a4;
+}
+.grid-item:hover{
+    opacity: 0.7;
+}

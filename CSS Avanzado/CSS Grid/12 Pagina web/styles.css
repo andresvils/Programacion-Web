@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "Montez";
+    src: url("../../../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+}
+body{
+    margin: 0;
+    font-family:"Montez";
+}
