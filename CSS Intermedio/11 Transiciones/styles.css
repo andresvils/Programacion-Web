@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+}
+.box_1{
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    color:black;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition-property: color;/*Elegis la propiedad a transicionar*/
+    transition-delay: 0.5s; /*El tiempoi que tardara en empezar la transicion y terminar*/
+    transition-duration: 1s; /*La duracion de la transicion*/
+    box-sizing: border-box;
+}
+a{
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 50px;
+}
+.box_1:hover{
+    color: #fFF;
+
+}
+.box_2{
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+    color: red;
+    margin-top: 50px; 
+    transition: left 1s cubic-bezier(.3,.37,.37,.67) 0.5s;
+    /*Los parametros de transition son los siguientes
+    transition: propiedad | duracion | tiempo de transicion|delay*/
+    left: 0;
+    position: relative; 
+}
+body:hover .box_2{
+    left:800px;
+
+}

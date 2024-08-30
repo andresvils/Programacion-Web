@@ -1,0 +1,28 @@
+
+body{
+    background-color: rgb(228, 210, 50);
+    margin: 0;
+}
+.box{
+    width: 100%;
+    height: 100px;
+    margin: 20px;
+    background-color: rgba(129, 107, 129, 0.568);
+    background-image: url("https://th.bing.com/th/id/OIP.gWfjlC0BN06ptiDBYsc-4AHaEK?rs=1&pid=ImgDetMain");
+    background-size: cover; /* contain obliga a la imagen a contenerse almenos una vez,cover Se Adapta a la resolucion de la caja*/         
+    background-position: top;
+    background-attachment: fixed;/*permite el efecto de la imagen q se mueve*/
+
+    /*el codigo de abajo es lo mismo que escribir las 5 propiedades de arriba de background
+    background: url("https://th.bing.com/th/id/OIP.gWfjlC0BN06ptiDBYsc-4AHaEK?rs=1&pid=ImgDetMain") top / cover fixed rgba(129, 107, 129, 0.568);
+    */
+}
+h2{
+    padding: 20px;
+    text-align: center;
+}
+.opaco{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(218, 23, 23, 0.445);
+}

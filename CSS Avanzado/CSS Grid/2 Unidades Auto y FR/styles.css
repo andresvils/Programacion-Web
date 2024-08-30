@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.grid{
+    display: grid;
+    height: 80vh;
+    /* PROPIEDAD AUTO Y 1FR
+    auto : en una celda de una cuadrícula, estás diciendo que el tamaño de 
+    esa celda se ajustará automáticamente al contenido que tenga dentro. 
+    Esto significa que la celda se expandirá o se contraerá según la cantidad 
+    de contenido que albergue
+    fr: es una unidad flexible en CSS Grid que significa "fracción 
+    del espacio disponible". Cuando usas 1fr, estás diciendo que el elemento 
+    debe tomar una fracción del espacio disponible en la cuadrícula sin
+    importar su contenido.*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto ;
+}
+
+.grid-item{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    background-color:#48e;
+}

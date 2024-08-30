@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000;
+}
+body,div{
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(3,200px);
+    grid-auto-rows: 50px;
+    grid-auto-columns:50px;
+    grid-auto-flow: row;
+    /*El gap nos permite definir la separacion de los grid-items */
+    gap: 10px;
+    /*generalmente para complementar esta separacion con los margenes se usa 
+    padding con la misma separacion en px que el gap */
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.grid-item{
+    font-size: 30px;
+    color: #fff;
+    background-color:#48e;
+}

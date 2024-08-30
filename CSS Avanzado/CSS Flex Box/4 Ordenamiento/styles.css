@@ -1,0 +1,41 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+    background-color: #ccc;
+}
+div,body{
+    box-sizing: border-box;
+}
+.flexbox{
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 20px;
+    border: 2px solid #000;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 100px;
+    background-color: #fff;
+}
+.flex-item{
+    background-color: #911;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 100px;
+    order: 1; 
+
+    /*Cambia el orden de las cajas por una jerarquia numerica es decir el primer
+    elemento sera el con menor jerarquia es decir el numero mas chico y el ultimo
+    el numero de mayor jerarquia es decir el mas grande
+    IMPORTANTE ESTA PROPIEDADES SE LE DARAN A LOS HIJOS
+    */
+}
+
+.flex-item:first-child{
+    background-color: #d56;
+    order: 0;
+}
+.flex-item:last-child{
+    background-color: black;
+    order:-1
+}

@@ -1,0 +1,80 @@
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1f1e1e;
+    color: #eee;
+    background:linear-gradient(to top,#333,#000);
+}
+
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 22px;
+    padding: 10px;
+}
+form{
+    background-color: transparent;
+    padding:20px 0;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 45px rgba(248, 246, 246, 0.6);
+    margin-top: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.form_input{
+    padding: 6px 20px;
+}
+input,textarea,select{
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: none;
+    border: 1px solid rgba(190, 184, 184, 0.664);
+    box-shadow: 0px 0px 15px #0001;
+    background-color: transparent;
+    border-radius: 4px;
+    color: rgb(213, 224, 235);
+    resize: vertical;
+}
+option{
+    background-color: #222;
+    margin: 10px;
+}
+textarea{
+    min-width: 100%;
+    resize: none;
+    max-height: 200px;
+    font-family: sans-serif;
+}
+label{
+    font-size: 0.88em;
+    line-height: 2;
+}
+
+.mirror{
+    margin: auto;
+    text-align: center;
+}
+.boton{
+    width: auto;
+    height: 10px;
+}
+fieldset{
+    border-radius: 5px;
+    border: 1px solid #666;
+    padding: 8px 6px 20px 6px;
+    margin: 20px;
+}
+legend{
+    padding: 0 6px;
+}
+a{
+    color: #69f;
+    text-decoration: none;
+}

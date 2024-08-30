@@ -1,0 +1,38 @@
+div{
+    padding: 20px;
+}
+/*aplica las funciones a la primera letra de la etiqueta seleccionada*/
+h1::first-letter{
+    color: red;
+    font-size: 2em;
+    letter-spacing: -8px;
+}
+/*Aplica las funciones a la primera linea de la etiqueta seleccionada*/
+div::first-line{
+    color: red;
+    font-weight: bold;
+}
+/*aplica las funciones a todo lo que seleccionesmos con el mouse*/
+*::selection{
+    background-color: aquamarine;
+}
+/*sirve para modificar apartados especificos de las etiquetas*/
+input::placeholder{
+    color: green;
+    background-color: rgb(214, 195, 195);
+}
+
+/*sirve para modificar los puntos de las listas*/
+li::marker{
+    color: blue;
+}
+/*sirve para agregar conenido especifico*/
+li::before{
+    content: 'Antes ';
+    color: violet;
+}
+li::after{
+    content: '  Despues';
+    color: aqua;
+}
+

@@ -1,0 +1,24 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+}
+.flexbox{
+    display: flex; /*Vuelve la caja flexible */
+    flex-direction: row; /*hace que las cajas se coloquen en filas, 
+    column hara q se coloquen en columnas*/
+}
+.flex-item{
+    background-color: #911;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 180px;
+}
+
+.flex-item:first-child{
+    background-color: #d56;
+}
+.flex-item:last-child{
+    background-color: black;
+}

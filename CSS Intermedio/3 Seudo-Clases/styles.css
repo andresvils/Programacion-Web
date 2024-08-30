@@ -1,0 +1,58 @@
+h1{
+    color: #48e;
+    font-family: sans-serif;
+    margin: 30px;
+}
+/*Activa las funciones cuando el mouse pasa por encima del h1 gracias a hover*/
+h1:hover{
+    background-color: #ccc;
+    color: #000;
+}
+/*Activa las funciones cuando damos click al objeto*/
+
+h1:active{
+    background-color: red;
+    color: violet;
+}
+/*aplica las funciones al primer elemento de ese tipo encontrado*/
+li:first-child{
+    color: red;
+}
+/*selecciona a una posicion especifica*/
+li:nth-child(2){ /*Si colocamos una n acompañada con el numero salta n elementos*/
+    color: green;
+}
+/*aplica las funciones al ultimo elemento de ese tipo encontrado*/
+li:last-child{
+    color: blue;
+}
+/*enlace visitado esto aplica las funciones dpeendiendo del estado*/
+a:link{
+    color: red;
+}
+a:visited{
+    color: violet;
+}
+/*El is selecciona de una etiqueta sus clases*/
+section :is(.elemento1,.elemento2,.elemento3){
+    color:mediumturquoise;
+}
+/*Esta etiqueta lo que hace es que en caso de tener un elemento especificado
+se aplicaran sus funciones*/
+section:has(.elemento_especial){
+    background-color: #000;
+    color:aliceblue
+
+}
+
+/* valido verifican el cumplimiento de la funcionalidad*/
+
+label:has(input:valid){
+    color: green;
+}
+label:has(input:invalid){
+    color: red;
+}
+input{
+    color: inherit;
+}

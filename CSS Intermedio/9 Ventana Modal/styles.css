@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+dialog{
+    background-color: rgba(0, 0, 0, 0.384);
+    height: 100vh;
+    box-sizing: border-box;
+    backdrop-filter: blur(1px);
+}
+
+.modal__content{
+    background-color: #fff;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+.modal__title{
+    margin-top: 10px;
+}
+.modal__close-button{
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 6px;
+}

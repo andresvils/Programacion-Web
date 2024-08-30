@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <Style>
+        table,thead,tbody,tfoot,td,tr,th{
+            width: 25%;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #000;
+        }
+    </Style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#1">inicio</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="tabla.html">Tabla</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+        </ul>
+    </nav>
+    <table>
+        <caption>Contenido del Libro</caption>
+        <thead>
+            <tr>
+                <th colspan="3">Capitulos del Libro</th>
+            </tr>
+            <tr>
+                <th>Capitulo</th>
+                <th>Titulo de Capitulo</th>
+                <th>Paginas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1</td>
+                <td>introduccion</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Primeros Pasos</td>
+                <td>6-12</td>
+            </tr>
+            <tr>
+                <td rowspan="3">2</td>
+                <td>Conceptos Basicos</td>
+                <td>13-20</td>
+            </tr>
+            <tr>
+                <td>Avanzado</td>
+                <td>21-35</td>
+            </tr>
+            <tr>
+                <td>Ejemplos Practicos</td>
+                <td>36-45</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>3</td>
+                <td>Conclusiones</td>
+                <td>46-50</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fcfcfc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #48e2;
+}
+li,ul{
+    list-style: none;
+}
+body,div{
+    box-sizing: border-box;
+}
+nav,header,footer,aside,main{
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #444;
+    background-color: #fff;
+}
+/*grid-area se usa para colocar un elemento dentro de un área específica de una 
+cuadrícula (grid). Esta propiedad es bastante versátil y permite que los 
+elementos se coloquen en diferentes áreas definidas en una cuadrícula.*/
+.grid{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns:minmax(200px,1fr) minmax(300px,3fr) minmax(200px,1fr); 
+    grid-template-rows:1fr;
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 10px;
+    padding: 10px;
+    grid-template-areas: /*Crea Areas en el orden en que se colocaran*/
+    /* Puedes asignar un nombre a un área de la cuadrícula y luego usar 
+    ese nombre para colocar los elementos en esa área*/
+    "nav main aside";
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    background-color: #48e;
+    border-color: #48e;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 30px;    
+}
+nav{
+    grid-area: nav; /*Asigna el area  por su nombre*/
+}
+main{
+    grid-area: main; /*Asigna el area  por su nombre*/
+    min-width: 300px;
+    max-width: 700px;
+}
+aside{
+    grid-area: aside;/*Asigna el area  por su nombre*/
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+nav,aside{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+@media  screen and (max-width:800px) {
+    .grid{
+        grid-template-columns:minmax(200px,1fr) minmax(300px,3fr) ; 
+    }
+    nav,aside{
+        height: auto;
+        position: static;
+    }
+    aside{
+        display: none;
+    }
+}
+
+@media screen and (max-width:580px){
+    ul,li{
+        padding: 0;
+    }
+    nav{
+        text-align: center;
+    }
+    .grid{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "nav "
+        "main"
+        "aside";
+    }
+    
+}

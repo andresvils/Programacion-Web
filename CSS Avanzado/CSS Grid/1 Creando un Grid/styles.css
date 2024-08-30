@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.grid{
+    display: grid;/*Esta propiedad convierte nuestro contenedor en un cuadricula*/
+    /*Esta Propiedad nos permite crear columas y darle un ancho*/
+    grid-template-columns: 200px 200px 200px;
+    /*Esta propiedad nos permite crear filas y su largo*/
+    grid-template-rows: 300px 300px;
+}
+
+.grid-item{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    background-color:#48e;
+}

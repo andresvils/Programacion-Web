@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    background-color: #ededed;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(245, 242, 79);
+    color:#fff;
+    position: relative;
+}
+.box--blue{
+    background-color: blue;
+    top: 70px;
+    left: 20px;
+    z-index: 10;
+
+}
+.box:first-child{
+    background-color: red;
+    top: 110px;
+    left: 60px;
+    z-index: 20;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../IMG/OIP.png">
+</head>
+<body>
+    <form>
+        <h2>Formulario de contacto</h2>
+        <fieldset>
+            <legend>Informacion basica</legend>
+            <!--Labels-->
+            <div class="form_input">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" placeholder="Chusty" id="nombre">
+            </div>
+            <div class="form_input">
+                <label>Email
+                    <input type="text" placeholder="Ejemplo@gmail.com">
+                </label>
+            </div>
+            <div class="form_input">
+                <label>Asunto
+                    <input type="text" placeholder="Trabajo">
+                </label>
+            </div>
+
+            <!--Labels-->
+        </fieldset>
+        
+        <!--Select-->
+        <div class="form_input">
+            <label >Tipo de Usuario
+                <select name="type-of-user">
+                    <option value="user1">Seguidor</option>
+                    <option value="user2">Empresa</option>
+                    <option value="usar3">Otros</option>
+                </select>
+            </label>
+            
+        </div>
+        <!--Select-->
+
+        <!--Datalist-->
+        <div class="form_input">
+            <label >Referente
+                <input list="referente">
+                <datalist id="referente" name="referente">
+                    <option value="Amigo"></option>
+                    <option value="Redes"></option>
+                    <option value="Noticias"></option>
+                </datalist>
+            </label>
+            
+        </div>
+        <!--Datalist-->
+
+        <!--Textarea-->
+        <div class="form_input">
+            <label for="mensaje" >Mensaje</label>
+            <textarea id="mensaje" rows="8" placeholder="Deja tu mensaje"></textarea>
+        </div>
+        <!--Textarea-->
+
+        <!--Labels-->
+        <div class="form_input mirror" >
+            <label for="p">Acepto los <a href="terms.html" target="_blank">terminos y condiciones</a></label>
+            <input type="checkbox" class="boton" id="p">
+        </div>
+        <!--Labels-->
+    </form>
+</body>
+</html>

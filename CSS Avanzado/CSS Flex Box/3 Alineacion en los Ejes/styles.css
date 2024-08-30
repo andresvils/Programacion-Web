@@ -1,0 +1,79 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+}
+div,body{
+    box-sizing: border-box;
+}
+.flexbox{
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 10px;
+    border: 2px solid #000;
+/*justify content alineara todo en base al eje principal en este caso el horizontal
+    flex-start: Alinea los elementos al principio del contenedor.
+    flex-end: Alinea los elementos al final del contenedor.
+    center: Centra los elementos en el contenedor.
+    space-between: Distribuye los elementos con el máximo espacio posible entre ellos.
+    space-around: Distribuye los elementos con espacio alrededor de cada uno.
+    space-evenly: Distribuye los elementos con espacio igual entre ellos. */
+
+    justify-content:space-evenly;
+
+/*Aling-items alineara todo respecto del eje cruzado en este caso el vertical
+    flex-start: Alinea los elementos al inicio del eje transversal.
+    flex-end: Alinea los elementos al final del eje transversal.
+    center: Centra los elementos en el eje transversal.
+    baseline: Alinea los elementos en la línea base del texto.
+    stretch: Estira los elementos para llenar el contenedor (este es el valor predeterminado).
+IMPORTANTE EL ALING ITEM SE USA CUANDO SE TRABAJA CON UNA LINEA DE CAJAS!    
+*/
+    align-items: start;
+    height: 360px;
+/*Aling-content Permite manejar las lineas verticales del contenedor
+    flex-start: Alinea las líneas de elementos al inicio del contenedor en el eje transversal.
+    flex-end: Alinea las líneas de elementos al final del contenedor en el eje transversal.
+    center: Centra las líneas de elementos en el eje transversal.
+    space-between: Distribuye el espacio entre las líneas de elementos.
+    space-around: Distribuye el espacio alrededor de cada línea de elementos.
+    space-evenly: Distribuye el espacio de manera uniforme entre las líneas de elementos.
+    stretch: Estira las líneas de elementos para llenar el espacio del contenedor en el eje transversal.
+IMPORTANTE EL ALING-CONTET SE USA CUANDO SE TRABAJA CON MAS DE LINEA DE CAJAS !
+    */
+    align-content: space-evenly;
+}
+.flex-item{
+    background-color: #911;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    direction: rtl;
+    width: 100px;
+}
+
+.flex-item:first-child{
+    background-color: #d56;
+}
+.flex-item:last-child{
+    background-color: black;
+}
+/*activando solamente flex display en un contenedor y luego en su hijo margin 0
+esto centrara automaticamente el contenido y sin aplicar otras propiedes*/
+.flexbox2{
+    display: flex;
+    margin: 10px;
+    border: 2px solid #000;
+    height: 200px;
+}
+.flex-item_2{
+    display: flex;
+    color: #fff;
+    background-color: #000;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+p{
+    font-size: 20px;
+    margin: auto;
+}

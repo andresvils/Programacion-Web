@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caja CSS Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Modelo de Caja CSS Interactivo</h1>
+    
+    <div class="controls">
+        <label for="margin">Margen: <span id="marginValue">20</span>px</label>
+        <input type="range" id="margin" min="0" max="50" value="20">
+        
+        <label for="padding">Relleno (Padding): <span id="paddingValue">20</span>px</label>
+        <input type="range" id="padding" min="0" max="50" value="20">
+        
+        <label for="border">Borde: <span id="borderValue">5</span>px</label>
+        <input type="range" id="border" min="0" max="20" value="5">
+        
+        <label for="width">Ancho de Contenido: <span id="widthValue">200</span>px</label>
+        <input type="range" id="width" min="100" max="400" value="200">
+        
+        <label for="height">Altura de Contenido: <span id="heightValue">200</span>px</label>
+        <input type="range" id="height" min="100" max="400" value="200">
+    </div>
+    
+    <div class="box" id="box">
+        Contenido de la caja
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

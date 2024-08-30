@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+.box{
+    width: 150px;
+    background-color: red;
+    margin: auto;
+    margin-top: 50px;
+    border: 5px solid #000;
+    padding: 10px;
+}
+.box:hover{
+    outline: 10px solid #000; /*Crea un borde meramente visual que no afecta al contenido de la caja*/
+}
+
+input{
+    margin: 50px;
+    border: none;
+    border-top: 3px solid #000;
+    padding: 6px;
+    outline: 3px solid blue;
+    outline-offset: 5px;
+    transition: outline 1s, outline-offset 1s;
+}
+input:focus{
+    border-color: blue;
+    color: blue;
+}
+
+
+input:focus-visible{
+    outline: none;
+}

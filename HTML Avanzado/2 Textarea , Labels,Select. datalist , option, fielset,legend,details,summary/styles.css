@@ -1,0 +1,120 @@
+
+body{
+    margin: 0;
+    font-family:sans-serif;
+    background-color: #1f1e1e;
+    color: #eee;
+    background:linear-gradient(to top,#333,#000);
+    align-content: center;
+}
+
+.nav{
+    font-weight: 100;
+    font-size: 20px;
+    border-radius:20px;
+    box-shadow: 0px 0px 45px rgba(248, 246, 246, 0.6);
+    background-color: #000;
+    text-align: center;
+    margin: auto;
+    width: 750px;
+    padding: 0%;
+    position: relative;
+}
+.nav__list{
+    padding: 0%;
+    text-align: center;
+}
+.nav__item{
+    padding: 0%;
+    display: inline-block;
+    margin: 20px 40px;
+}
+.nav__link{
+    padding: 0%;
+    color: #eee;
+    text-decoration: none;
+    padding: -10px;
+}
+.nav__link:hover{
+    border-bottom: 1px solid white;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    bottom: 0.9em;
+    right: 9%;
+    position: absolute;
+}
+nav input[type="text"]{
+    text-decoration: none;
+    border: none;
+}
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 22px;
+    padding: 10px;
+}
+form{
+    background-color: transparent;
+    padding:20px 0;
+    max-width: 500px;
+    margin:auto;
+    box-shadow: 0px 0px 45px rgba(248, 246, 246, 0.6);
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-family: inherit;
+}
+.form_input{
+    padding: 6px 20px;
+}
+input,textarea,select{
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: none;
+    border: 1px solid rgba(190, 184, 184, 0.664);
+    box-shadow: 0px 0px 15px rgba(182, 179, 179, 0.067);
+    background-color: transparent;
+    border-radius: 4px;
+    color: rgb(213, 224, 235);
+    resize: vertical;
+}
+option{
+    background-color: #222;
+    margin: 10px;
+}
+textarea{
+    min-width: 100%;
+    resize: none;
+    max-height: 200px;
+    font-family: sans-serif;
+}
+label{
+    font-size: 0.88em;
+    line-height: 2;
+}
+
+.mirror{
+    margin: auto;
+    text-align: center;
+}
+.boton{
+    width: auto;
+    height: 10px;
+}
+fieldset{
+    border-radius: 5px;
+    border: 1px solid #666;
+    padding: 8px 6px 20px 6px;
+    margin: 20px;
+}
+legend{
+    padding: 0 6px;
+}

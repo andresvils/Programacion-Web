@@ -1,0 +1,15 @@
+.box{
+    padding: 20px 50px;
+    background:#000000;
+    margin: 20px;
+    text-align: center;
+    font-family: sans-serifs;
+    font-size: 20px;
+    color: rgb(133, 236, 236);
+    border-top: 5px solid rgb(133, 236, 236);
+    border-left:1px dashed;
+    border-right: 1px dashed;
+    border-bottom: 1px dashed;
+    border-radius: 5px;
+    font-weight: bold;
+}

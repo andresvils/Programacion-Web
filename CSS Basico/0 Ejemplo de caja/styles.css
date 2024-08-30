@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 300px;
+}
+
+.box {
+    background-color: #f0f0f0;
+    border: 5px solid #333;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: content-box;
+    text-align: center;
+    line-height: 160px; /* Ajustado para que el texto esté centrado verticalmente */
+}

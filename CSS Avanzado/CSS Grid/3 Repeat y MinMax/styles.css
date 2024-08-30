@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.grid{
+    display: grid;
+    /*
+    repeat() : en CSS Grid te permite simplificar la declaración 
+    de múltiples columnas o filas que tienen el mismo tamaño.
+    
+    minmax(): te permite establecer un rango de tamaño para las 
+    columnas o filas en una cuadrícula. Es útil cuando deseas que un elemento 
+    tenga un tamaño mínimo y máximo, adaptándose a diferentes tamaños de pantalla
+    o contenedores.*/
+    grid-template-columns: repeat(2,minmax(300px,400px));
+    grid-template-rows: repeat(2,minmax(100px,150px));
+}
+
+.grid-item{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    background-color:#48e;
+}

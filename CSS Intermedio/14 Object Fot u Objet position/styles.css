@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+img{
+    width: 500px;
+    height: 300px;
+    object-fit: scale-down; /*Adapta la imagen a la caja*/
+    border: 2px solid #000;/**tambien esta la opcion contain que contiene la imagen*/
+    margin-top: 50px;
+    margin-left: 50px;
+}

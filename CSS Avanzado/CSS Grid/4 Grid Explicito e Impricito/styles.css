@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+/*En CSS Grid, el concepto de "grid explícito" e "implícito" 
+se refiere a cómo se definen y gestionan las áreas de una cuadrícula.
+El grid explícito es la parte de la cuadrícula que defines,El grid implícito es el que se crea 
+automáticamente cuando colocas elementos en la cuadrícula que no encajan en el 
+grid explícito definido
+
+grid-auto-rows: Define el tamaño de las filas creadas implícitamente
+grid-auto-columns: Define el tamaño de las columnas creadas implícitamente.
+grid-auto-flow: Controla cómo se colocan los elementos en las filas y columnas 
+implícitas. Tiene tres valores principales:
+row: los elementos implicitos se colocan en filas adicionales
+column: los elementos explicitos se colocan en columnas adicionales
+*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,200px));
+    grid-template-rows: repeat(3,minmax(100px,200px));
+    grid-auto-rows: 50px;
+    grid-auto-columns:50px;
+    grid-auto-flow: column;
+}
+
+.grid-item{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    background-color:#48e;
+}

@@ -1,0 +1,27 @@
+div{
+    display: inline-flex;
+}
+img[src$="jpg"]{ /*Esto selecciona todos los elementos que finalicen con jpg*/
+    width: 100px;
+    height: 100px;
+}
+img[src^=".."]{  /* Esto selecciona todos los elementos que empiecen con ..*/
+    width: 110px;
+
+}
+
+ul li{ /*Selector descendiente : selecciona la etiqueta dentro elegida*/
+    color: red;
+}
+
+ul >strong{ /*Seleccion hija: selecciona solamente si es una etiqueta hija*/
+    color: green;
+}
+h1 + p{ /*Selector por prosedencia : el elemento debe ser precedido por */
+    color: blue;
+}
+
+h2~p{ /*Selector por colapso , selecciona todos los predecedidos elegidos*/
+    color:  violet;
+}
+

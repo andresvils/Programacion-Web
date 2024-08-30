@@ -1,0 +1,9 @@
+@font-face{
+    font-family: "Montez";
+    src: url("../fonts/Montez-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+/*Esto nos permite usar fuentes especificas descargadas de google fonts
+url es la posicion de la fuente en nuestro equipo el font family elegido sera 
+el nombre de nuestra fuente ,puede ser cualquiera, y hasta varias con el mismo
+nombre pero pre establecidas por el font weight*/

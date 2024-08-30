@@ -1,0 +1,15 @@
+/* Seleccion Por elemento*/
+h1{
+    color:black
+}
+li{
+    color:red
+}
+/* Seleccion por clases*/
+.faltante{
+    color:violet
+}
+/* Seleccion por identificador unico*/
+#ingrediente-secreto{
+    color: blue;
+}

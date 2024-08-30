@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>Registro de Usuario</h1>
+        <fieldset>
+            <legend>Informacion Personal</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <br>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+            <div>
+                <label for="fecha_nacimineto">Fecha de Nacimiento:</label>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+            </div>
+            <div>
+                <label for="">Genero:</label><br>
+                Masculino<input type="radio" name="masculino" id="masculino"><br>
+                Femenino <input type="radio" name="femenino" id="femenino"><br>
+                Otro <input type="radio" name="otro" id="otro">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion de Contacto</legend>
+            <label for="email">Correo Electronico:</label>
+            <input type="text" name="email" id="email"><br><br>
+            <label for="cell">Numero de Telefono</label>
+            <input type="text" name="cell" id="cell"><br><br>
+            <label for="direccion">Direccion:</label><br>
+            <textarea name="direccion" id="direccion"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion de Cuenta</legend>
+            <label for="">Nombre de Usuario:</label>
+            <input type="text" name="" id=""><br><br>
+            <label for="">Contraseña:</label>
+            <input type="text" name="" id=""><br><br>
+            <label for="">Confirmar Contraseña:</label>
+            <input type="text" name="" id="">
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label for="referencia">Seleccionar un Color Favorito:
+                <select>
+                    <option value="1">Rojo</option>
+                    <option value="2">Azulk</option>
+                    <option value="3">Morado</option>
+                    <option value="4">Verde</option>
+                    <option value="5">Blanco</option>
+                    <option value="6">Negro</option>
+                </select>
+            </label>
+            <br><br>
+            <input type="checkbox" class="terms" id="terms">
+            <label for="terms">Acepto los terminos y Condiciones</label>
+        </fieldset>
+        <div>
+            <input type="submit" name="register" id="register" value="Registrarse">
+        </div>
+        <div>
+            <a href="index.html">
+                <button type="button">Volver</button>
+            </a>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fcfcfc;
+}
+body,div{
+    box-sizing: border-box;
+}
+/*el grid-auto-flow dense permite que no se creen espacios vacios
+cuando se colapsan las imagenes*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item{
+    font-size: 30px;
+    background-color:#48e;
+    max-width: 100%;
+    min-height: 30vh;
+    border-radius: 16px;
+    background-image: url("serpi.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+}
+
+.grid-item:first-child{
+    grid-row:1/span 3;
+    grid-column: 3/span 4;
+}
+.grid-item:hover{
+    opacity: 0.74;
+}

@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #c2bcbc;
+}
+.box{
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    margin-top: 50px;
+    color: red;
+    position: relative;
+    left:0;
+    border: 2px solid #0009;
+    margin: auto;
+    margin-top: 50px;
+    overflow-y: scroll; /*Permite controlar el desbordamiento de texto scroll
+    es el mas usado en el eje y , los demas son medio obsoletos*/
+}

@@ -1,0 +1,9 @@
+#titulo{
+    color: green ;
+}
+.titulo{
+    color: red;
+}
+h1{
+    color: blue!important /*Esta funcion ignora todas las prioridades*/
+}

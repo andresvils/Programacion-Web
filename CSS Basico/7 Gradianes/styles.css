@@ -1,0 +1,27 @@
+body{
+    background-color: red;
+    margin: 0;
+}
+
+.box{
+    width: 300px;
+    height: 270px;
+    background: linear-gradient(transparent,black);
+    margin: 0;
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 20px;
+    border-top: 6px solid rgba(255, 0, 0, 0.575);
+}
+img{
+    width: 300px;
+    height: 220px;
+    margin-top: -15px;
+}
+h1{
+    margin: auto;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+}

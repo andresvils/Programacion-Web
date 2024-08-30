@@ -1,0 +1,31 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+}
+.flexbox{
+    display: flex;
+    flex-flow: row wrap; 
+    /* Este codigo de abajo es lo mismo que escribir flex-flow:column wrap
+    flex-direction: column;
+    flex-wrap: wrap;*//*
+    wrap :  permite que las cajas se adapten a la resolucion y no se modifique su tamaño
+    nowrap:  hara que no se adapten y se modifique su tamaño*/
+    margin: 20px;
+    border: 2px solid #000;
+}
+.flex-item{
+    background-color: #911;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.flex-item:first-child{
+    background-color: #d56;
+}
+.flex-item:last-child{
+    background-color: black;
+}

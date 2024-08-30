@@ -1,0 +1,25 @@
+p{
+    color:black; /*color de letra*/
+    font-family:Ga Maamli; /*fuente de letra*/
+    font-size: 15px; /*tamaño de letra*/
+    font-weight:bold; /*grosor de letra*/
+    font-style: italic; /*inclinacion*/
+    text-align: justify; /*posicion*/
+    text-decoration: none;/*subrayado*/
+    line-height:1.4;/*Espaciado entre renglones*/
+    letter-spacing: 1px;/*Espacio entre letras*/
+    text-transform: unset;/*Transforma texto*/
+    text-shadow:none;/*Sombras*/
+    word-wrap: normal;
+    word-break: normal;
+}
+h1{
+    font-family:"Montez";
+    text-align: center;
+}
+a{
+    color:red;
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: none;/*quite el subrayado del link*/
+}
