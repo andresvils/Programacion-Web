@@ -1,0 +1,41 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+    background-color:#ccc;
+}
+div{
+    box-sizing: border-box;
+}
+.box{
+    background-color: #fff;
+    margin: 20px;
+    border: 4px solid #48e;
+    padding: 6px;
+    border-radius: 39px;
+}
+.barra{
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 10%;
+    animation-name: llenar-barra;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state:running;
+}
+.barra:active{
+    animation-play-state: paused;
+}
+@keyframes llenar-barra{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+        background-color: #f33;
+    }
+}
