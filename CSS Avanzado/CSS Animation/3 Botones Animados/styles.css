@@ -57,19 +57,44 @@ body{
     background-color: #48e;
     display: block;
     height: 1px;
-    width: 70%;
+    width: 20%;
     position: absolute;
     z-index: -1;
     left: 0;
     right: 0;
     margin: auto;
     opacity: 0;
-    animation: parpadear-linea 1s infinite alternate backwards;
+    top: -16px;
+    transition: top .6s,opacity .6s, width .3s;
+    animation: parpadear-linea 1s infinite alternate-reverse backwards;
 
 }
 .btn-2:hover::before{
     opacity: 1;
-    top:-6px
+    top:-5px;
+    width: 80%;
+}
+.btn-2::after{
+    content: "";
+    background-color: #48e;
+    display: block;
+    height: 1px;
+    width: 10%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    top: -19px;
+    transition: top .6s,opacity .6s,width .3s;
+    animation: parpadear-linea 1s infinite alternate-reverse backwards;
+
+}
+.btn-2:hover::after{
+    opacity: 1;
+    top:-9px;
+    width:50% ;
 }
 @keyframes parpadear {
     0%{
@@ -126,34 +151,26 @@ body{
         box-shadow:none
     }
     30%{
-        color: #fff3;
-        border: 1px solid #fff3;
-        text-shadow: none;
-        box-shadow: none;
-    }
-    35%{color: rgb(111, 168, 255);
-        text-shadow: 0px 0px 9px #48ee,0px 0px 3px rgba(159, 197, 255, 0.454);
-    }
-    46%{
-        color: #fff3;
-        border: 1px solid #fff3;
-        text-shadow: none;
-        box-shadow: none;
-    }
-    60%{
-        border-color: #48e;
+        background-color: #48e;
         box-shadow: 0px 0px 6px #48e4,0px 0px 16px #48e5;
     }
+    35%{background-color: #fff3;
+        box-shadow:none
+    }
+    46%{
+        background-color: #48e;
+        box-shadow: 0px 0px 6px #48e4,0px 0px 16px #48e5;
+    }
+    60%{background-color: #fff3;
+        box-shadow:none
+    }
     78%{
-        color: #fff3;
-        border: 1px solid #fff3;
-        text-shadow: 0px;
-        box-shadow: 0px;
+        background-color: #48e;
+        box-shadow: 0px 0px 6px #48e4,0px 0px 16px #48e5;
     }
     100%{
-        color: rgb(111, 168, 255);
-        text-shadow: 0px 0px 9px #48ee,0px 0px 3px rgba(159, 197, 255, 0.454);
-    }
+        background-color: #fff3;
+        box-shadow:none}
 
 
 }

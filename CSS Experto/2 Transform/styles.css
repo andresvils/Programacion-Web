@@ -1,0 +1,27 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    margin: auto;
+    padding: 20px 50px;
+    width: fit-content;
+}
+.box-1{
+    background-color: red;
+    rotate: 0deg;
+    transition: rotate .6s;
+}
+.box-2{
+    background-color: black;
+    transform: skew(0);
+    transition: transform .6s;
+}
+.box-2:hover{
+    transform: skew(80);
+}
+.box-1:hover{
+    rotate: 360deg;
+}

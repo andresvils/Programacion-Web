@@ -1,0 +1,15 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+    height: 100vh;
+    display: flex;
+}
+.box{
+    margin: auto;
+    padding: 20px 50px;
+    width: fit-content;
+    border: 2px solid black;
+}
+img{
+    filter:blur(2px) invert() saturate(.9);
+}
