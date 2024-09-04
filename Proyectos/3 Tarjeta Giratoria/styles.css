@@ -7,7 +7,7 @@ body,div,ul,li,a,h1,h2,h3,h4{
 }
 @font-face{
     font-family: "Montez";
-    src: url("../../fonts/Montez-Regular.ttf") format("truetype");
+    src: url("../../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
     font-weight: 400;
 }
 body{

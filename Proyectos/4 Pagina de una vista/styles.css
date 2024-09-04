@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "Montez";
+    src: url("../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+}
+
+body{
+    font-family: "Montez";
+    --bg-color:#ff9464;
+    --chat-bg-color:#fff;
+    --dark-color:#f62;
+}
+body,div,ul,li,a,h1,h2,h3,h4,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../../IMG/fondo.gif);
+    height: 200dvh;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+.text-container{
+    min-height: 100dvh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: clamp(1rem,4vw,10rem);
+    color: var(--chat-bg-color);
+    font-weight: 700;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    padding: 1vw;
+    mix-blend-mode: hard-light;
+    animation: aparecer-texto both;
+    animation-timeline: scroll();
+    animation-range: cover 20%;
+}
+.left-text{
+    color: var(--dark-color);
+}
+.right-text{
+    padding-right:80px ;
+    font-weight: 900;
+}
+.left-text{
+    filter: drop-shadow(0px 0px 1px var(--dark-color)) drop-shadow(0px 0px 9px var(--dark-color));
+}
+
+img{
+    filter: brightness(0) invert(1);
+    position: fixed;
+    top:auto;
+    animation: aparecer both;
+    animation-timeline: scroll();
+    max-height: 100vh;
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        filter: brightness(0) invert(1);
+        translate: 0 -20%;
+        scale: .7;
+    }
+    100%{
+        opacity: 1;
+        filter: brightness(0) invert(1);
+        translate: 0 0;
+        scale: 1;
+    }
+}
+@keyframes aparecer-texto {
+    0%{
+        opacity: 0;
+        translate: 0 20%;
+        scale: 2;
+    }
+    100%{
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+@media screen and (min-height:900px){
+    .text-container{
+        top: -150px;
+        margin: 0px -20px;
+        width: 80%;
+    }
+    .left-text{
+        transform: translate(0px,-60px);
+    }
+    .right-text{
+        transform: translate(-70px,-60px);
+    }
+}
