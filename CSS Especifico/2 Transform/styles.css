@@ -1,8 +1,8 @@
 body {
     margin:0;
     font-family:sans-serif;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
 }
 .box{
     margin: auto;
@@ -12,7 +12,7 @@ body {
 .box-1{
     background-color: red;
     rotate: 0deg;
-    transition: rotate .6s;
+    transition: rotate 6s;
 }
 .box-2{
     background-color: black;
@@ -20,8 +20,9 @@ body {
     transition: transform .6s;
 }
 .box-2:hover{
-    transform: skew(80);
+    transform: skew(10deg);
 }
 .box-1:hover{
     rotate: 360deg;
+    transform: translate(0px,-200px);
 }

@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.box{
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #000;
+}
+p::first-letter{
+    initial-letter: 2 1;
+    padding: 10px;
+    padding-bottom: 0;
+    padding-left: 2px;
+    color: #f44;
+    font-family: Arial, Helvetica, sans-serif;
+}

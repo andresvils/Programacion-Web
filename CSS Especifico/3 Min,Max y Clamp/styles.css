@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 20px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.box{
+    background-color: #48e;
+    display: grid;
+    color: #fff;
+    place-content: center;
+    font-size: clamp(2.4rem,2.2vw,4rem);
+    margin: 120px auto;
+    padding: 0 40px;
+}
+h1{
+    font-size: 2.2em;
+    margin-bottom: 0;
+}

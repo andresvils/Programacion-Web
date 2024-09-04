@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-principal:#48e;
+    --tamaño-letra:clamp(1rem,2.2vw,4rem);
+    --alto-box:calc(80vh - 100px);
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.box{
+    --color-principal:#48e;
+    font-size: var(--tamaño-letra);
+    border: 6px solid #000;
+    padding: 0 40px;
+}
+.box:first-child{
+    height: 200px;
+}
+.box:nth-child(2){
+    height: var(--alto-box);
+    overflow: auto;
+}
