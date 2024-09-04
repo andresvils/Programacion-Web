@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Montez";
+    src: url("../../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+}
+body{
+    font-family: "Montez";
+    --bg-color:color-mix(in srgb,#f62 70%, #fff);
+    --chat-bg-color:#fff;
+    --dark-color:#f62
+}
+body,div,ul,li,a,h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--bg-color);
+}
+.chat{
+    max-width: clamp(300px,70%,900px);
+    background-color: var(--chat-bg-color);
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px #0003;
+}
+.chat__user{
+    display: flex;
+    align-items: center;
+}
+.chat__user img{
+    max-width: 2.4rem;
+    border-radius: 50%;
+    margin: 4px;
+}
+.chat__content{
+    padding: 12px;
+    border: 1px solid var(--bg-color);
+    display: flex;
+    flex-direction: column;
+}
+.msg{
+    background-color: var(--bg-color);
+    color: #fff;
+    font-size: .6rem;
+    padding: 7px;
+    position: relative;
+    border-radius: 9px 9px 9px 0;
+    z-index: 10;
+    max-width: clamp(300px,70%,600px);
+    margin: 6px;
+    width: fit-content;
+
+}
+.msg::before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: var(--bg-color);
+    bottom: -3px;
+    left: -4px;
+    clip-path: polygon(43% 0%, 0% 100%, 100% 68%);
+    z-index: -1;
+}
+.self{
+    background-color: var(--dark-color);
+    margin-left: auto;
+    border-radius: 9px 9px 0 9px;
+}
+.self::before{
+    background-color: var(--dark-color);
+    clip-path: polygon(57% 0%, 100% 100%, 0% 68%);
+    bottom: -3px;
+    left: auto;
+    right: -4px;
+}
