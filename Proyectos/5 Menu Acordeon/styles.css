@@ -25,10 +25,19 @@ body{
     max-width: clamp(300px,100%,700px);
     margin: auto;
 }
-.faq details{
+details{
     background-color: var(--faq-color);
     margin: 7px;
     padding: 7px;
+    max-height: 34px;
+    transition: max-height 2s;
+    overflow: hidden;
+}
+details[open]{
+    max-height: 400px;
+}
+details[open] .content{
+    animation: aparecer .5s .3s both;
 }
 summary{
     user-select: none;
@@ -37,21 +46,51 @@ summary{
     padding: 5px 10px;
     margin: 10px;
     margin-bottom: 0;
-    border-top: 1px solid var(--bg-color);
     font-size: .8rem;
     color: var(--text-color);
 }
+summary{
+    user-select:none;
+    position: relative;
+}
 summary::marker{
+    content: "";
+}
+summary::before{
+    content: "+";
+    position: absolute;
+    right: 0;
     color:#ffb18c ;
+    font-weight: 900;
+}
+details[open] summary::before{
+    content: "-";
 }
 details b{
     background-color: var(--dark-color);
-    padding: 1px 3px;
+    padding: 2px 4px;
     color: #fff;
+    margin-right: 4px;
 }
-details:nth-child(2) b{
-    background-color: #48e;
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+        translate: 0 -20px;
+        border-top: 1px solid transparent;
+    }
+    50%{
+        border-top: 1px solid transparent;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+        border-top: 1px solid var(--bg-color);
+    }
 }
-details:nth-child(3) b{
-    background-color:#4b7
+
+@media screen and (min-width:600px){
+    .faq{
+        max-width: clamp(300px,70%,700px);
+    }
 }
