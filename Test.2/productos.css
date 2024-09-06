@@ -1,3 +1,4 @@
+
 @font-face{
     font-family: "Montez";
     src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
@@ -5,7 +6,6 @@
 }
 *{
     box-sizing: border-box;
-    font-family: "Montez";
 }
 :root{
     --color-principal:#F4CE14;
@@ -13,6 +13,7 @@
     --color-fondo:#F5F7F8;
     --color-barras:#45474B;
     --fuente-navbar:clamp(1.6rem,4vw,4rem);
+    --fuente-texto:"Montez";
 }
 
 .grid{
@@ -28,9 +29,9 @@
     "footer";
 }
 
-div,ul,nav,header,footer,a,li,ul,label{
-    margin: 0;
-    padding: 0;
+div,ul,nav,header,footer,a,li,ul,label,p,h2,img{
+    margin: 0 ;
+    padding: 0 ;
 }
 body{
     background-color: var(--color-fondo);
@@ -44,6 +45,7 @@ body{
 /*                                    */
 /* ************************************/
 .header{
+    font-family: var(--fuente-texto);
     grid-area: header;
     background-color: var(--color-barras);
     display: flex;
@@ -148,6 +150,7 @@ body{
 /*                                    */
 /* ************************************/
 .sidebar{
+    font-family: var(--fuente-texto);
     z-index: 1;
     grid-area: aside;
     background-color: var(--color-barras);
@@ -155,9 +158,10 @@ body{
     height: 100dvh;
     width: clamp(200px,26dvw,800px);
     font-size: clamp(.2rem,1.4vw,3rem);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 
@@ -187,7 +191,7 @@ input[type="checkbox"]{
 
 
 
-input[type="checkbox"]:checked ~ label{
+.sidebar__form > input[type="checkbox"]:checked ~ label{
     color: #F4CE14;
     background-color: #45474B;
 }
@@ -224,6 +228,7 @@ input[type="checkbox"]:checked ~ label::after,input[type="checkbox"]:checked ~ l
 /* ************************************/
 
 main{
+    font-family: var(--fuente-texto);
     grid-area: main;
     height: 100dvh;
     background-color: var(--color-fondo);
@@ -239,8 +244,11 @@ main{
     width: 40dvw;
     height: 40dvw;
     border:10px solid var(--color-barras);
+    border-bottom: 34px solid var(--color-barras);
     border-radius: 10%;
+    position: relative;
 }
+
 .almuerzo{
     background-image: url(almuerzo/pexels-catscoming-1907244.jpg);  
     background-size:cover;
@@ -248,6 +256,22 @@ main{
     clip-path: inset(0 0 0 0);
     animation: almuerzo 36s ease-out 1s infinite;
 }
+
+
+.comida-checkbox{
+    display: none;
+}
+.comida-boton{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    width: 130px;
+    border-radius: 0px 0px 19px 19px;
+    background-color: var(--color-principal);
+    bottom:-28.4px;
+    left: 0px;
+}
+
 
 
 .desayuno{
@@ -325,3 +349,98 @@ main{
         background-image: url(cena/pexels-yungsaac-2119758.jpg);
     }
 }
+
+.ventana__modal{
+    z-index: 20;
+    position: absolute;
+    transform: translate(40px,20px);
+    width: 80dvw;
+    height: 94dvh;
+    background-color: var(--color-barras);
+    outline:10px solid var(--color-barras);
+    border: 10px solid var(--color-principal);
+    filter: drop-shadow(0px 0px 3px black);
+    overflow:scroll;
+}
+.ventana__modal-content{
+    text-align: center;
+    font-family: var(--fuente-texto);
+    display: flex;
+    flex-flow: column wrap;
+
+}
+.ventana__modal-content > h2,p{
+    color: #FF0000; /* Rojo brillante */
+    text-shadow: 
+        0 0 3px #FF0000,    /* Resplandor de brillo interno */
+        0 0 7px #FF0000,   /* Resplandor más amplio */
+        0 0 1px #FF0000,   /* Resplandor más amplio */
+        0 0 15px #FF0000,   /* Resplandor aún más amplio */
+        0 0 19px #FF0000,   /* Resplandor extenso */
+        0 0 24px #FF0000;   /* Resplandor máximo */
+    font-weight: 900;
+    letter-spacing: 6px;
+}
+.ventana__modal-content > h2{
+    font-size: 50px;
+    margin: 0;
+}
+.ventana__modal-content > p{
+    font-size: 30px;
+    margin: 0;
+}
+.content__plato{
+    width: 100px;
+    height: 150px; /* Aumenté el alto para acomodar todos los elementos */
+    display: flex;
+    flex-direction: row; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: space-between; /* Distribuye el espacio equitativamente */
+    margin:0 40px;
+    gap: 40px; /* Espacio adicional entre los elementos */
+}
+.content__plato img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 9px solid #fff;
+    outline: 1px solid #0000;
+}
+.defect{
+    width: 120px !important;
+}
+.content__plato input{
+    display: none;
+}
+.content__plato label{
+    text-align: center;
+    border:4px solid var(--color-principal);
+    outline: 1px solid #000;
+    outline-offset: -4px;
+    border-radius: 8px;
+    color: #000;
+    padding: 5px 10px;
+    width: 90px;
+    font-weight: bold;
+}
+
+.close{
+    background-color: rgb(253, 61, 61) ;
+    display: none;
+}
+.add{
+    background-color: rgb(16, 236, 64);
+    display: none;
+}
+
+.content__plato > input[type="checkbox"]:not(:checked) ~ .add{
+    display: block;
+}
+.content__plato > input[type="checkbox"]:not(:checked) ~ .add{
+    display: block;
+}
+.content__plato > input[type="checkbox"]:checked ~ .close{
+    display: block;
+}
+
+

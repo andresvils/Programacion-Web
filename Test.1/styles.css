@@ -1,95 +1,61 @@
 *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    margin: 80px 80px;
+    user-select: none;
     box-sizing: border-box;
 }
-body,div,ul,li,a,h1,h2,h3,h4{
-    margin: 0;
-    padding: 0;
-}
-label,.sidebar__nav{
-    user-select: none;
-}
-@font-face{
-    font-family: "Montez";
-    src: url("../../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
-    font-weight: 400;
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: 200px 200px;
+    grid-auto-flow: dense;
+    gap: 20px;
+    padding: 20px;
 }
 
-body{
-    font-family: "Montez";
-    --bg-color:#F5F7F8;
-    --siderbar-color:#45474B;
-    --dark-color:#F4CE14;
-    --text-color:#444;
-    background-color: var(--bg-color);
-}
-
-/*Sider Styles*/
-
-.sidebar{
-    background-color: var(--siderbar-color);
-    position: fixed;
-    height: 100dvh;
-    width: clamp(200px,26dvw,800px);
-    font-size: clamp(.2rem,1.4vw,3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-input[type="checkbox"]{
-    display: none;
-}
-
-.sidebar__form{
-    position: absolute;
-    z-index: 20;
-    right: -3.5rem;
-    top: 260px;
-}
-.sidebar__form .open-button{
-    display: none;
-}
-.sidebar label{
+.grid-item{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: #fff;
+    background-color:#48e;
     position: relative;
-    color:  #F4CE14;
-    background-color: #45474B;
-    font-size: 2.4rem;
-    border-radius: 0px 50px 50px 0px;
-    padding: .7rem;
-    padding-left: .9rem;
-    user-select: none;
+}
+label{
+    position: absolute;
+    text-align: center;
+    border:1px solid black;
+    border-radius: 8px;
+    color: #110f0f;
+    padding: 5px 10px;
+    width: 180px;
+    bottom: 0;
 }
 
 
-
-input[type="checkbox"]:checked ~ label{
-    color: #F4CE14;
-    background-color: #45474B;
-}
-
-input[type="checkbox"]:checked ~ label::after,input[type="checkbox"]:checked ~ label::before{
+.close{
+    background-color: red;
     display: none;
 }
-.sidebar:has(input[type="checkbox"]:checked){
-    width: fit-content;
-}
-.sidebar:has(input[type="checkbox"]:checked) .sidebar__form label{
+.add{
+    background-color: greenyellow;
     display: none;
 }
-.sidebar:has(input[type="checkbox"]:checked) .sidebar__form .open-button{
+.back{
+    background-color: red;
+}
+
+input[type="checkbox"]:not(:checked) ~ .add{
     display: block;
 }
-
-.sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img{
-    display: none;
+input[type="checkbox"]:not(:checked) ~ .add{
+    display: block;
 }
-.sidebar:has(input[type="checkbox"]:checked) picture{
-    width: fit-content;
-    margin-left: .75rem;
+input[type="checkbox"]:checked ~ .close{
+    display: block;
 }
-.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar__item a,.profile-option){
-    display: none;
-
-}
-
