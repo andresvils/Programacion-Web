@@ -1,11 +1,10 @@
 @font-face{
-    font-family: "Montez";
+    font-family: "Mont";
     src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
     font-weight: 400;
 }
 *{
     box-sizing: border-box;
-    font-family: "Montez";
 }
 :root{
     --color-principal:#F4CE14;
@@ -40,6 +39,7 @@ body{
 }
 .header{
     grid-area: header;
+    font-family:"Mont";
     background-color: var(--color-barras);
     display: flex;
     justify-content: space-between;
@@ -138,3 +138,152 @@ body{
     
 }
 
+/* ************************************/
+/*                                    */
+/*          Main  Form                */
+/*                                    */
+/* ************************************/
+
+.main{
+    grid-area: main;
+    margin: 0;
+    font-family:"Montez";
+    background-color: #1f1e1e;
+    color: var(--color-fondo);
+    background:var(--color-fondo);
+    align-content: center;
+}
+
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 22px;
+    padding: 10px;
+}
+form{
+    background-color: var(--color-barras);
+    padding:20px 0;
+    max-width: 500px;
+    margin:auto;
+    box-shadow: 0px 0px 45px rgba(248, 246, 246, 0.6);
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-family: inherit;
+    position: relative;
+}
+.form_input{
+    padding: 6px 20px;
+}
+.ingreso,textarea,select{
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: none;
+    border: 2px solid var(--color-principal);
+    box-shadow: 0px 0px 15px rgba(182, 179, 179, 0.067);
+    background-color: transparent;
+    border-radius: 4px;
+    color: var(--color-fondo);
+    resize: vertical;
+}
+
+
+option{
+    background-color: var(--color-barras);
+    margin: 10px;
+}
+textarea{
+    min-width: 100%;
+    resize: none;
+    max-height: 200px;
+    font-family: sans-serif;
+}
+label{
+    font-size: 0.88em;
+    line-height: 2;
+
+}
+
+.mirror{
+    margin: auto;
+    text-align: center;
+}
+.boton{
+    width: auto;
+    height: 10px;
+}
+fieldset{
+    border-radius: 5px;
+    border: 2px solid var(--color-principal);
+    padding: 8px 6px 20px 6px;
+    margin: 20px;
+}
+legend{
+    padding: 0 6px;
+}
+span{
+    font-size: 19px !important;
+    position: relative;
+    top:3px;
+    color: var(--color-principal);
+}
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.hambuguesa:checked~.terms{
+    color: var(--color-secundario);
+    background-color: var(--color-principal);
+    border: 2px solid var(--color-secundario);
+}
+.boton__terms-open{
+    padding: 20px;
+    padding-left: 22vw;
+    cursor:pointer;
+
+}
+.boton__terms-close{
+    z-index: 10;
+    position: sticky;
+    transform: translate(-9%,-1773%);
+    border: 5px groove var(--color-secundario);
+    background-color: var(--color-barras);
+}
+.terms{
+    color: var(--color-principal);
+    margin-left: 45vw;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.form__modal{
+    display: none;
+    position: absolute;
+    background-color: var(--color-barras);
+    color: var(--color-fondo);
+    border:5px groove var(--color-secundario);
+    width: 80%;
+    height: 80%;
+    top: 20px;
+    left: 40px;
+    overflow: scroll;
+}
+.form__modal-content{
+    padding: 10px;
+}
+.check_terms:checked ~ div{
+    display: block;
+}
+.check_terms:not(:checked) ~ .boton__terms-close{
+    display: none;
+}
+.check_terms:has(.check_terms:not(:checked)) ~ .form__modal{
+    display: none;
+}

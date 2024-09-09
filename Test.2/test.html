@@ -40,16 +40,31 @@
             <form class="sidebar__form">
                 <input class="form__input" type="checkbox" id="open-aside-menu">
                 <label class="material-symbols-outlined a" for="open-aside-menu">Shopping_Cart</label>
-                <label class="material-symbols-outlined open-button b" for="open-aside-menu">Shiopping_Cart/label>
+                <label class="material-symbols-outlined open-button b" for="open-aside-menu">Shopping_Cart</label>
                 <div class="sidebar__content">
                 </div>
             </form>
         </aside>
         <main>
-            <div class="ventana__modal">
+            <input class="almuerzo-checkbox" type="checkbox" id="open-almuerzo">
+            <label class="boton__open almuerzo-boton_open" for="open-almuerzo">ver</label>
+
+            <input class="desayuno-checkbox" type="checkbox" id="open-desayuno">
+            <label class="boton__open desayuno-boton_open" for="open-desayuno">ver</label> 
+
+            <input class="cena-checkbox" type="checkbox" id="open-cena">
+            <label class="boton__open cena-boton_open" for="open-cena">ver</label>
+
+            <label class="boton__close almuerzo-boton_close" for="open-almuerzo">X</label>
+
+            <label class="boton__close desayuno-boton_close" for="open-desayuno">X</label>
+
+            <label class="boton__close cena-boton_close" for="open-cena">X</label>   
+
+            <div class="ventana__modal ventana-almuerzo">
                 <div class="ventana__modal-content">
                     <H2>Menu</H2>
-                    <p>Cena</p>
+                    <p>Almuerzo</p>
                     <div class="content__plato">
                         <img src="almuerzo/pexels-catscoming-1907244.jpg" alt="">
                         <input type="checkbox" id="bot_1">
@@ -88,6 +103,91 @@
                     </div>
                 </div>
             </div>
+            <div class="ventana__modal ventana-desayuno">
+                <div class="ventana__modal-content">
+                    <H2>Menu</H2>
+                    <p>Desayuno</p>
+                    <div class="content__plato">
+                        <img src="merienda/pexels-ash-craig-122861-376464.jpg" alt="">
+                        <input type="checkbox" id="bot_1">
+                        <label for="bot_1" class="boton-1 close">Quitar</label>
+                        <label for="bot_1" class="boton-1 add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="merienda/pexels-iina-luoto-460132-1211887.jpg" alt="">
+                        <input type="checkbox" id="bot_2">
+                        <label for="bot_2" class="close">Quitar</label>
+                        <label for="bot_2" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="merienda/pexels-janetrangdoan-1099680.jpg" alt="">
+                        <input type="checkbox" id="bot_3">
+                        <label for="bot_3" class="close">Quitar</label>
+                        <label for="bot_3" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="merienda/pexels-lum3n-44775-1410236.jpg" alt="">
+                        <input type="checkbox" id="bot_4">
+                        <label for="bot_4" class="close">Quitar</label>
+                        <label for="bot_4" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img class="defect" src="merienda/pexels-pixabay-414262.jpg" alt="">
+                        <input type="checkbox" id="bot_5">
+                        <label for="bot_5" class="close">Quitar</label>
+                        <label for="bot_5" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="merienda/pexels-vojtech-okenka-127162-1055272.jpg" alt="">
+                        <input type="checkbox" id="bot_6">
+                        <label for="bot_6" class="close">Quitar</label>
+                        <label for="bot_6" class="add">Agregar</label>
+                    </div>
+                </div>
+            </div>
+            <div class="ventana__modal ventana-cena">
+                <div class="ventana__modal-content">
+                    <H2>Menu</H2>
+                    <p>Cena</p>
+                    <div class="content__plato">
+                        <img src="cena/pexels-andra-325634-918581.jpg" alt="">
+                        <input type="checkbox" id="bot_1">
+                        <label for="bot_1" class="boton-1 close">Quitar</label>
+                        <label for="bot_1" class="boton-1 add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="cena/pexels-horizon-content-2100060-3738730.jpg" alt="">
+                        <input type="checkbox" id="bot_2">
+                        <label for="bot_2" class="close">Quitar</label>
+                        <label for="bot_2" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="cena/pexels-jonathanborba-2983104.jpg" alt="">
+                        <input type="checkbox" id="bot_3">
+                        <label for="bot_3" class="close">Quitar</label>
+                        <label for="bot_3" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="cena/pexels-myfoodie-2702674.jpg" alt="">
+                        <input type="checkbox" id="bot_4">
+                        <label for="bot_4" class="close">Quitar</label>
+                        <label for="bot_4" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img class="defect" src="cena/pexels-valeriya-1893558.jpg" alt="">
+                        <input type="checkbox" id="bot_5">
+                        <label for="bot_5" class="close">Quitar</label>
+                        <label for="bot_5" class="add">Agregar</label>
+                    </div>
+                    <div class="content__plato">
+                        <img src="cena/pexels-yungsaac-2119758.jpg" alt="">
+                        <input type="checkbox" id="bot_6">
+                        <label for="bot_6" class="close">Quitar</label>
+                        <label for="bot_6" class="add">Agregar</label>
+                    </div>
+                </div>
+            </div>
+            
             <section class="content">
                 <div class="content__carrusel almuerzo">
                 </div>
@@ -103,6 +203,3 @@
     </div>
 </body>
 </html>
-<!--                <input class="comida-checkbox" type="checkbox" id="open-almuerzo">
-                    <label class="comida-boton" for="open-almuerzo">ver</label> 
--->

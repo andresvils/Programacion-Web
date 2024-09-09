@@ -150,18 +150,16 @@ body{
 /*                                    */
 /* ************************************/
 .sidebar{
-    font-family: var(--fuente-texto);
-    z-index: 1;
+    z-index: 2;
     grid-area: aside;
     background-color: var(--color-barras);
     position: fixed;
     height: 100dvh;
-    width: clamp(200px,26dvw,800px);
+    width: fit-content;
     font-size: clamp(.2rem,1.4vw,3rem);
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 
@@ -190,17 +188,8 @@ input[type="checkbox"]{
 }
 
 
-
-.sidebar__form > input[type="checkbox"]:checked ~ label{
-    color: #F4CE14;
-    background-color: #45474B;
-}
-
-input[type="checkbox"]:checked ~ label::after,input[type="checkbox"]:checked ~ label::before{
-    display: none;
-}
 .sidebar:has(input[type="checkbox"]:checked){
-    width: fit-content;
+    width: clamp(200px,26dvw,800px);
 }
 .sidebar:has(input[type="checkbox"]:checked) .sidebar__form label{
     display: none;
@@ -209,18 +198,10 @@ input[type="checkbox"]:checked ~ label::after,input[type="checkbox"]:checked ~ l
     display: block;
 }
 
-.sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img{
-    display: none;
-}
-.sidebar:has(input[type="checkbox"]:checked) picture{
-    width: fit-content;
-    margin-left: .75rem;
-}
 .sidebar:has(input[type="checkbox"]:checked) :is(.sidebar__item a,.profile-option){
     display: none;
 
 }
-
 /* ************************************/
 /*                                    */
 /*              Main                  */
@@ -232,6 +213,7 @@ main{
     grid-area: main;
     height: 100dvh;
     background-color: var(--color-fondo);
+    position: relative;
 }
 
 .content{
@@ -256,22 +238,6 @@ main{
     clip-path: inset(0 0 0 0);
     animation: almuerzo 36s ease-out 1s infinite;
 }
-
-
-.comida-checkbox{
-    display: none;
-}
-.comida-boton{
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    width: 130px;
-    border-radius: 0px 0px 19px 19px;
-    background-color: var(--color-principal);
-    bottom:-28.4px;
-    left: 0px;
-}
-
 
 
 .desayuno{
@@ -349,6 +315,11 @@ main{
         background-image: url(cena/pexels-yungsaac-2119758.jpg);
     }
 }
+/* ************************************/
+/*                                    */
+/*        Ventana Modal de main       */
+/*                                    */
+/* ************************************/
 
 .ventana__modal{
     z-index: 20;
@@ -361,14 +332,111 @@ main{
     border: 10px solid var(--color-principal);
     filter: drop-shadow(0px 0px 3px black);
     overflow:scroll;
+    display:none;
 }
+
+.comida-checkbox{
+    display: none;
+}
+.boton__open{
+    z-index:1;
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    width: 130px;
+    border-radius: 0px 0px 19px 19px;
+    background-color: var(--color-principal);
+}
+.almuerzo-boton_open{
+    top: 136px;
+    left:123px
+}
+.desayuno-boton_open{
+    top: 326px;
+    left: 123px;
+}
+.cena-boton_open{
+    top: 516px;
+    left: 123px;
+}
+.boton__close{
+    z-index: 30;
+    text-align: center;
+    width: 20px;
+    background-color: var(--color-barras);
+    color: var(--color-principal);
+    outline: 9px groove var(--color-principal);
+    display: block;
+    position: absolute;
+    top:29px;
+    left:310px
+}
+
+.almuerzo-checkbox:checked ~ .ventana-almuerzo{
+    display: block;
+}
+.almuerzo-checkbox:not(:checked)~.almuerzo-boton_close{
+    display: none;
+}
+
+.desayuno-checkbox:checked ~ .ventana-desayuno{
+    display: block;
+}
+.desayuno-checkbox:not(:checked)~.desayuno-boton_close{
+    display: none;
+}
+
+.cena-checkbox:checked ~ .ventana-cena{
+    display: block;
+}
+.cena-checkbox:not(:checked)~.cena-boton_close{
+    display: none;
+}
+
+
 .ventana__modal-content{
     text-align: center;
     font-family: var(--fuente-texto);
     display: flex;
-    flex-flow: column wrap;
-
+    flex-flow: column nowrap;
+    width:100%;
+    height:100%;
+    overflow:scroll;
 }
+@keyframes blinking {
+    0% {
+        text-shadow: 
+            0 0 3px #FF0000,    
+            0 0 7px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 15px #FF0000,   
+            0 0 19px #FF0000,   
+            0 0 24px #FF0000;
+        opacity: 1;
+    }
+    50% {
+        text-shadow: 
+            0 0 1px #FF0000,    
+            0 0 3px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 7px #FF0000,   
+            0 0 10px #FF0000,   
+            0 0 12px #FF0000;
+        opacity: 0.5;
+    }
+    100% {
+        text-shadow: 
+            0 0 3px #FF0000,    
+            0 0 7px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 15px #FF0000,   
+            0 0 19px #FF0000,   
+            0 0 24px #FF0000;
+        opacity: 1;
+    }
+}
+
 .ventana__modal-content > h2,p{
     color: #FF0000; /* Rojo brillante */
     text-shadow: 
@@ -380,6 +448,7 @@ main{
         0 0 24px #FF0000;   /* Resplandor máximo */
     font-weight: 900;
     letter-spacing: 6px;
+    animation: blinking 1s infinite; 
 }
 .ventana__modal-content > h2{
     font-size: 50px;
@@ -388,16 +457,15 @@ main{
 .ventana__modal-content > p{
     font-size: 30px;
     margin: 0;
+    margin-bottom: 25px;
 }
+
 .content__plato{
-    width: 100px;
-    height: 150px; /* Aumenté el alto para acomodar todos los elementos */
     display: flex;
-    flex-direction: row; /* Coloca los elementos en una columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: space-between; /* Distribuye el espacio equitativamente */
-    margin:0 40px;
-    gap: 40px; /* Espacio adicional entre los elementos */
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin:10px 20px;
 }
 .content__plato img{
     width: 70px;
@@ -406,9 +474,7 @@ main{
     border: 9px solid #fff;
     outline: 1px solid #0000;
 }
-.defect{
-    width: 120px !important;
-}
+
 .content__plato input{
     display: none;
 }

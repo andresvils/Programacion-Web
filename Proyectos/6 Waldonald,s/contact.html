@@ -6,7 +6,6 @@
     <title>Waldonald's</title>
     <link rel="stylesheet" href="../6 Waldonald,s/assents/css/contact.css">
     <link rel="icon" href="../../../IMG/icono-web 2.png">
-    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 <body>
@@ -37,7 +36,121 @@
             </nav>
 
         </header>
-        <main>
+        <main class="main">
+            <form>
+                <h2><span class="material-symbols-outlined">cloud</span> Formulario de Contacto</h2>
+                <fieldset>
+                    <legend>Informacion basica</legend>
+                    <div class="form_input">
+                        <span class="material-symbols-outlined" >Person</span>
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input class="ingreso" type="text" placeholder="Javie Milei" id="nombre">
+                    </div>
+                    <div class="form_input">
+                        <span class="material-symbols-outlined" >Mail</span>
+                        <label>Email
+                            <input class="ingreso" type="text" placeholder="LibertadAvanzal69@gmail.com">
+                        </label>
+                    </div>
+                    <div class="form_input">
+                        <span class="material-symbols-outlined" >Subject</span>
+                        <label >Asunto
+                            <select name="type-of-user">
+                                <option value="user2">Contacto</option>
+                                <option value="user1">Queja</option>
+                                <option value="usar3">Proyecto</option>
+                                <option value="usar3">Otros</option>
+                            </select>
+                        </label>
+                    </div>
+                </fieldset>
+                <!--Select-->
+                <div class="form_input">
+                    <span class="material-symbols-outlined">id_card</span>
+                    <label >Tipo de Usuario
+                        <select name="type-of-user">
+                            <option value="user1">Cliente</option>
+                            <option value="user2">Empresa</option>
+                            <option value="usar3">Otros</option>
+                        </select>
+                    </label>
+                </div>
+                <!--Select-->
+        
+        
+                <!--Textarea-->
+                <div class="form_input">
+                    <span class="material-symbols-outlined">Comment</span>
+                    <label for="mensaje" >Mensaje</label>
+                    <textarea id="mensaje" rows="8" placeholder="Deja tu mensaje"></textarea>
+                </div>
+                <!--Textarea-->
+        
+        
+                <input class="check_terms" type="checkbox"id="terminos">
+                <label class="boton__terms-open" for="terminos" >Acepto los Terminos y Condiciones</label>
+                <label class="boton__terms-close material-symbols-outlined" for="terminos">Close</label>
+                <input class="hambuguesa" type="checkbox" id="accept"> <br>
+                <label  for="accept" class="terms material-symbols-outlined">lunch_dining</label>
+                <div class="form__modal">
+                    <div class="form__modal-content">
+                        <h2>Términos y Condiciones de Waldonald's</h2>
+                        <p>Fecha de última actualización: 9/9/2024 <br> 
+                        <br>
+                        Bienvenido a Waldonald's. Al utilizar nuestros servicios, aceptas cumplir con los siguientes términos y condiciones. Te recomendamos que leas detenidamente este documento antes de realizar cualquier pedido o interactuar con nuestro sitio web y servicios. <br>
+                        <br>
+                        1. General <br>
+                        1.1 Estos Términos y Condiciones regulan el acceso y uso del sitio web de Waldonald's, así como los pedidos realizados a través de nuestro sitio web, aplicación móvil o en cualquiera de nuestras sucursales. <br>
+                        1.2 Waldonald's se reserva el derecho de modificar estos Términos en cualquier momento sin previo aviso. Es responsabilidad del usuario revisar periódicamente los términos. <br>
+                        <br>
+                        2. Pedidos <br>
+                        2.1 Los pedidos realizados en línea estarán sujetos a la disponibilidad de productos. Nos reservamos el derecho de rechazar o cancelar cualquier pedido en caso de falta de stock o errores en la información proporcionada. <br>
+                        2.2 Al realizar un pedido, garantizas que toda la información proporcionada es precisa, completa y actual. <br>
+                        2.3 Los precios indicados en nuestro sitio web pueden estar sujetos a cambios sin previo aviso, pero siempre respetaremos el precio mostrado en el momento de la compra. <br>
+                        <br>
+                        3. Entrega y Recolección <br>
+                        3.1 Ofrecemos servicios de entrega y recolección en nuestras sucursales participantes. <br>
+                        3.2 Los tiempos de entrega son estimados y pueden variar según las condiciones del tráfico, el clima u otros factores externos. Waldonald's no se hace responsable de retrasos en la entrega fuera de nuestro control. <br>
+                        3.3 Es responsabilidad del cliente proporcionar una dirección de entrega precisa. Waldonald's no se responsabiliza por la entrega fallida si la dirección proporcionada es incorrecta. <br>
+                        <br>
+                        4. Política de Devolución y Reembolsos <br>
+                        4.1 Debido a la naturaleza de nuestros productos (comida perecedera), no aceptamos devoluciones ni cambios, excepto en casos donde los productos recibidos no coincidan con el pedido realizado. <br>
+                        4.2 En caso de discrepancias en el pedido o productos defectuosos, por favor comunícate con nuestro servicio de atención al cliente dentro de las primeras 24 horas de recibir tu pedido para gestionar un reembolso o reemplazo. <br>
+                        <br>
+                        5. Alergias y Restricciones Alimentarias <br>
+                        5.1 Waldonald's no se hace responsable por alergias o reacciones adversas derivadas del consumo de nuestros productos. Los clientes deben revisar cuidadosamente los ingredientes de los productos y comunicar cualquier alergia al hacer un pedido. <br>
+                        5.2 Aunque tomamos precauciones para evitar la contaminación cruzada, no podemos garantizar que nuestros productos estén libres de alérgenos. <br>
+                        <br>
+                        6. Propiedad Intelectual <br>
+                        6.1 Todo el contenido disponible en nuestro sitio web, incluidos textos, imágenes, gráficos, logotipos y otros materiales, es propiedad de Waldonald's o de sus licenciantes y está protegido por leyes de propiedad intelectual.<br>
+                        6.2 No se permite la reproducción, distribución o uso no autorizado del contenido sin el permiso expreso de Waldonald's.<br>
+                        <br>
+                        7. Protección de Datos<br>
+                        7.1 Waldonald's se compromete a proteger la privacidad de nuestros clientes. Toda la información personal proporcionada se utilizará de acuerdo con nuestra Política de Privacidad, la cual puedes consultar en nuestro sitio web.<br>
+                        7.2 Al utilizar nuestros servicios, consientes que tus datos sean recopilados, almacenados y utilizados para procesar tu pedido y mejorar nuestra experiencia de usuario.<br>
+                        <br>
+                        8. Responsabilidad<br>
+                        8.1 Waldonald's no será responsable de daños directos, indirectos o incidentales que resulten del uso de nuestro sitio web o servicios, incluidos pero no limitados a errores en el pedido, problemas de entrega o fallos en la calidad de los productos.<br>
+                        8.2 En ningún caso Waldonald's será responsable de cualquier pérdida económica, daño moral o pérdida de beneficios derivados del uso de nuestros productos o servicios.<br>
+                        <br>
+                        9. Modificaciones al Servicio<br>
+                        9.1 Nos reservamos el derecho de modificar o interrumpir temporal o permanentemente el servicio sin previo aviso.<br>
+                        9.2 No seremos responsables ante ti ni ante terceros por cualquier modificación, suspensión o interrupción del servicio.<br>
+                        <br>
+                        10. Legislación Aplicable<br>
+                        10.1 Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de [País o Región]. Cualquier controversia relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de [País o Región].<br>
+                        <br>
+                        Si tienes alguna duda sobre estos Términos y Condiciones, no dudes en ponerte en contacto con nosotros a través de nuestro servicio de atención al cliente en [correo electrónico] o llamando a [número de teléfono].<br>
+                        <br>
+                        Gracias por elegir Waldonald's.<br>
+                        
+                        </p>
+                    </div>
+                </div>
+                <div class="form_input mirror" >
+                    <input class="ingreso" type="submit"id="a">
+                </div>
+            </form>
         </main>
         <footer>
         </footer>
