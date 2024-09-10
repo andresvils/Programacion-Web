@@ -6,47 +6,129 @@
     <title>Waldonald's</title>
     <link rel="stylesheet" href="../6 Waldonald,s/assents/css/locales.css">
     <link rel="icon" href="../../../IMG/icono-web 2.png">
-    <link rel="stylesheet" href="../../Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 <body>
+    <header class="header">
+        <!------------------------------------------------------------------->
+        <!--                        Boton open menu                        -->
+        <!------------------------------------------------------------------->
+        <input class="header__checkbox" type="checkbox" id="open-menu" >
+        <label class="header__open-nav-button material-symbols-outlined" for="open-menu"  role="button">Menu</label>
+        <!------------------------------------------------------------------->
+        <!--                      Logo del navegador                       -->
+        <!------------------------------------------------------------------->
+        <div class="header__logo-container">
+            <img class="header__logo" src="assents/images/W-30-8-2024 -2.png" alt="Error 404">
+            <!--Fuente de Logo : MILO REGULAR-->
+        </div>
+        <!------------------------------------------------------------------->
+        <!--                   Opciones del navegador                      -->
+        <!------------------------------------------------------------------->
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html" >Inicio</a></li>
+                <li class="header__nav-item" ><a href="productos.html">Productos</a></li>
+                <li class="header__nav-item" ><a href="locales.html" >Locales</a></li>
+                <li class="header__nav-item"><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="grid">        
-        <header class="header">
-            <!------------------------------------------------------------------->
-            <!--                        Boton open menu                        -->
-            <!------------------------------------------------------------------->
-            <input class="header__checkbox" type="checkbox" id="open-menu" >
-            <label class="header__open-nav-button material-symbols-outlined" for="open-menu"  role="button">Menu</label>
-            <!------------------------------------------------------------------->
-            <!--                      Logo del navegador                       -->
-            <!------------------------------------------------------------------->
-            <div class="header__logo-container">
-                <img class="header__logo" src="../6 Waldonald,s/assents/images/W-30-8-2024 -2.png" alt="Error 404">
-                <!--Fuente de Logo : MILO REGULAR-->
-            </div>
-            <!------------------------------------------------------------------->
-            <!--                   Opciones del navegador                      -->
-            <!------------------------------------------------------------------->
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="index.html" >Inicio</a></li>
-                    <li class="header__nav-item" ><a href="productos.html">Productos</a></li>
-                    <li class="header__nav-item" ><a href="locales.html" >Locales</a></li>
-                    <li class="header__nav-item"><a href="contact.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+        <main>
+            <section class="section__locales">
+                <h2 class="section__locales-title">Waldonald's Locales</h2>
+                <div class="section__locales-local">
+                    <div class="local__front">
+                        <h2>Waldonald's Central Park</h2>
+                        <p>En pleno centro de la ciudad, es ideal para disfrutar de una comida rápida tras un paseo por el parque.</p>    
+                    </div>
+                    <div class="local__back">
+                        <h2>Platos Principales</h2>
+                        <div class="icon__container">
+                            <img src="assents/images/iconos-comida/hamburguesa-con-queso.png" alt="">
+                            <img src="assents/images/iconos-comida/papas-fritas.png" alt="">
+                            <img src="assents/images/iconos-comida/lasana.png" alt="">
+                        </div>  
+                    </div>
+                </div>
+                <div class="section__locales-local">
+                    <div class="local__front">
+                        <h2>Waldonald's Vista al Mar</h2>
+                        <p>Con vistas al océano, este local ofrece una experiencia relajada frente a la playa.</p>  
+                    </div>
+                    <div class="local__back">
+                        <h2>Platos Principales</h2>
+                        <div class="icon__container">
+                            <img src="assents/images/iconos-comida/sopa-caliente.png" alt="">
+                            <img src="assents/images/iconos-comida/ensalada-de-frutas.png" alt="">
+                            <img src="assents/images/iconos-comida/salteado-de-huevo-con-tomate.png" alt="">
+                        </div>  
+                    </div>
+                </div>
+                <div class="section__locales-local">
+                    <div class="local__front">
+                        <h2>Waldonald's Plaza del Sol</h2>
+                        <p>Situado en la Plaza del Sol, es perfecto para una parada rápida mientras haces compras.</p>    
+                    </div>
+                    <div class="local__back">
+                        <h2>Platos Principales</h2>
+                        <div class="icon__container">
+                            <img src="assents/images/iconos-comida/comida-chatarra.png" alt="">
+                            <img src="assents/images/iconos-comida/fideos.png" alt="">
+                            <img src="assents/images/iconos-comida/causa-rellena.png" alt="">
+                        </div> 
+                    </div>
+                </div>
+                <div class="section__locales-local">
+                    <div class="local__front">
+                        <h2>Waldonald's Bosque Encantado</h2>
+                        <p>Rodeado de vegetación, este local ofrece un ambiente tranquilo con área al aire libre.</p>
+                    </div>
+                    <div class="local__back">
+                        <h2>Platos Principales</h2>
+                        <div class="icon__container">
+                            <img src="assents/images/iconos-comida/comida.png" alt="">
+                            <img src="assents/images/iconos-comida/pasta.png" alt="">
+                            <img src="assents/images/iconos-comida/taco.png" alt="">
+                        </div> 
+                    </div>
+                </div>
+                <div class="section__locales-local">
+                    <div class="local__front">
+                        <h2>Waldonald's Estación Gourmet</h2>
+                        <p>En la zona comercial, destaca por su menú innovador y servicio rápido.</p>
+                    </div>
+                    <div class="local__back">
+                        <h2>Platos Principales</h2>
+                        <div class="icon__container">
+                            <img src="assents/images/iconos-comida/comida-rapida.png" alt="">
+                            <img src="assents/images/iconos-comida/burrito.png" alt="">
+                            <img src="assents/images/iconos-comida/ramen.png" alt="">
+                        </div> 
+                    </div>
+                </div>
+                <div class="section__locales-local">
+                    <div class="local__front">
+                        <h2>Waldonald's Skyview Tower</h2>
+                        <p>Disfruta de una comida rápida con una vista panorámica desde lo alto de la ciudad.</p>
+                    </div>
+                    <div class="local__back">
+                        <h2>Platos Principales</h2>
+                        <div class="icon__container">
+                            <img src="assents/images/iconos-comida/hamburguesa.png" alt="">
+                            <img src="assents/images/iconos-comida/pizza.png" alt="">
+                            <img src="assents/images/iconos-comida/churrasco.png" alt="">
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </main>
         <aside>
             <section>
-                
+                <iframe src="https://www.google.com/maps/d/embed?mid=14wJTJQ0u7eiY9aYMmVz0O2qfOnu7Gsg&ehbc=2E312F&noprof=1"></iframe>
             </section>
         </aside>
-        <main>
-            <section>
-
-            </section>
-            <iframe src="https://www.google.com/maps/d/embed?mid=14wJTJQ0u7eiY9aYMmVz0O2qfOnu7Gsg&ehbc=2E312F&noprof=1"></iframe>
-        </main>
         <footer>
         </footer>
     </div>
