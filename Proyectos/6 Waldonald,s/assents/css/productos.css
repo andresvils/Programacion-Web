@@ -220,11 +220,15 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,1fr);
+    height:100%;
+    align-items:center;
+    align-content:center;
+    justify-items:center;
+    justify-content:center;
 }
 .content__carrusel{
-    margin: 20px auto;
-    width: 40dvw;
-    height: 40dvw;
+    width: 200px;
+    height: 200px;
     border:10px solid var(--color-barras);
     border-bottom: 34px solid var(--color-barras);
     border-radius: 10%;
@@ -324,14 +328,16 @@ main{
 .ventana__modal{
     z-index: 20;
     position: absolute;
-    transform: translate(40px,20px);
+    top:5%;
+    left: 10%;
     width: 80dvw;
-    height: 94dvh;
+    height: 80dvh;
     background-color: var(--color-barras);
     outline:10px solid var(--color-barras);
     border: 10px solid var(--color-principal);
     filter: drop-shadow(0px 0px 3px black);
     overflow:scroll;
+    scrollbar-width: 0;
     display:none;
 }
 
@@ -344,21 +350,22 @@ main{
     position: absolute;
     text-align: center;
     font-weight: bold;
-    width: 130px;
+    width: 180px;
     border-radius: 0px 0px 19px 19px;
     background-color: var(--color-principal);
+    border: 5px solid var(--color-barras);
 }
 .almuerzo-boton_open{
-    top: 136px;
-    left:123px
+    top: 23.9%;
+    left:12%
 }
 .desayuno-boton_open{
-    top: 326px;
-    left: 123px;
+    top: 56.8%;
+    left:12%
 }
 .cena-boton_open{
-    top: 516px;
-    left: 123px;
+    top: 90.3%;
+    left:12%
 }
 .boton__close{
     z-index: 30;
@@ -369,8 +376,8 @@ main{
     outline: 9px groove var(--color-principal);
     display: block;
     position: absolute;
-    top:29px;
-    left:310px
+    top:4.8%;
+    left: 9.8%;
 }
 
 .almuerzo-checkbox:checked ~ .ventana-almuerzo{
@@ -403,6 +410,7 @@ main{
     width:100%;
     height:100%;
     overflow:scroll;
+    scrollbar-width: 0;
 }
 @keyframes parpadeo-1 {
     0% {
@@ -499,6 +507,363 @@ main{
     }
 }
 
+
+
+
+
+@media screen and (min-width:250px) {
+    .boton__open{
+        width: 62.1%;
+        left: 19.1%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 57.1%;
+    }
+    .cena-boton_open{
+        top: 90.4%;
+    }
+}
+@media screen and (min-width:300px) {
+    .boton__open{
+        width: 59%;
+        left: 20.1%;
+    }
+    .almuerzo-boton_open{
+        top: 23.6%;
+    }
+    .desayuno-boton_open{
+        top: 57%;
+    }
+    .cena-boton_open{
+        top: 90.3%;
+    }
+}
+
+
+@media screen and (min-width:350px) {
+    .boton__open{
+        width: 52%;
+        left: 24.1%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:400px) {
+    .boton__open{
+        width: 44.9%;
+        left: 27.7%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.5%;
+    }
+}
+@media screen and (min-width:450px) {
+    .boton__open{
+        width: 40%;
+        left: 30.2%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .boton__open{
+        width: 37.9%;
+        left: 31.1%;
+    }
+    .almuerzo-boton_open{
+        top: 22.9%;
+    }
+    .desayuno-boton_open{
+        top: 55.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:550px) {
+    .boton__open{
+        width: 34.5%;
+        left: 32.8%;
+    }
+    .almuerzo-boton_open{
+        top: 23.9%;
+    }
+    .desayuno-boton_open{
+        top: 56.4%;
+    }
+    .cena-boton_open{
+        top: 89.7%;
+    }
+}
+@media screen and (min-width:600px) {
+    .boton__open{
+        width: 31.9%;
+        left: 34.1%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:650px) {
+    .boton__open{
+        width: 29.3%;
+        left: 35.3%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 55.8%;
+    }
+    .cena-boton_open{
+        top: 89.8%;
+    }
+}
+@media screen and (min-width:700px) {
+    .boton__open{
+        width: 27.3%;
+        left: 36.3%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+
+
+@media screen and (min-width:750px) {
+    .boton__open{
+        width: 25.3%;
+        left: 37.3%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:800px) {
+    .boton__open{
+        width: 24%;
+        left: 37.9%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 89.1%;
+    }
+}
+@media screen and (min-width:850px) {
+    .boton__open{
+        width: 22%;
+        left: 39%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 55.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:900px) {
+    .boton__open{
+        width: 21%;
+        left: 39.5%;
+    }
+    .almuerzo-boton_open{
+        top: 22.5%;
+    }
+    .desayuno-boton_open{
+        top: 55.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:950px) {
+    .boton__open{
+        width: 20%;
+        left: 40%;
+    }
+    .almuerzo-boton_open{
+        top: 23.5%;
+    }
+    .desayuno-boton_open{
+        top: 56.8%;
+    }
+    .cena-boton_open{
+        top: 90.1%;
+    }
+}
+@media screen and (min-width:1000px) {
+    main{
+        height: 70vh;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+        height:100%;
+    }
+    .content__carrusel{
+        width: 20vw;
+        height: 20vw;
+    }
+    .boton__open{
+        width: 19%;
+        top: 59.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.5%;
+    }
+    .cena-boton_open{
+        left: 74%;
+    }
+}
+@media screen and (min-width:1000px) {
+    .boton__open{
+        width: 19%;
+        top: 60.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.5%;
+    }
+    .cena-boton_open{
+        left: 74%;
+    }
+}
+@media screen and (min-width:1150px) {
+    .boton__open{
+        width: 19%;
+        top: 62.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.5%;
+    }
+    .cena-boton_open{
+        left: 74%;
+    }
+}
+@media screen and (min-width:1300px) {
+    .boton__open{
+        width: 19%;
+        top: 64.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.5%;
+    }
+    .cena-boton_open{
+        left: 74%;
+    }
+}
+@media screen and (min-width:1450px) {
+    .boton__open{
+        width: 19%;
+        top: 66.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.5%;
+    }
+    .cena-boton_open{
+        left: 74%;
+    }
+}
+@media screen and (min-width:1600px) {
+    .boton__open{
+        width: 19.4%;
+        top: 68.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.3%;
+    }
+    .cena-boton_open{
+        left: 73.7%;
+    }
+}
+@media screen and (min-width:1800px) {
+    .boton__open{
+        width: 19.4%;
+        top: 70.8%;
+    }
+    .almuerzo-boton_open{
+        left: 7%;
+    }
+    .desayuno-boton_open{
+        left: 40.3%;
+    }
+    .cena-boton_open{
+        left: 73.7%;
+    }
+}
+
+
+
+
+
 .ventana__modal-content > h2,p{
     color: #FF0000; /* Rojo brillante */
     text-shadow: 
@@ -521,8 +886,6 @@ main{
     margin: 0;
     margin-bottom: 25px;
     animation: parpadeo-1 2.5s ease-out  infinite
-}
-.ventana__modal-content>p>span{
 }
 
 .content__plato{
@@ -574,4 +937,109 @@ main{
     display: block;
 }
 
+footer{
+    grid-area: footer;
+    background-color: var(--color-barras);
+    height: 20vh;
+}
 
+
+
+@media screen and (min-width:500px) {
+    .ventana__modal{
+        overflow: hidden;
+    }
+    .ventana__modal-content{
+        display: grid;
+        grid-template-areas:
+        "titulo titulo"
+        "subtitulo subtitulo"
+        "plato_1 plato_2"
+        "plato_3 plato_4"
+        "plato_5 plato_6";
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,80px) repeat(3,1fr);  
+        scroll-padding: 0;
+        scrollbar-width: 0;
+        overflow:scroll;
+        overflow-x: hidden;
+    }
+    .ventana__modal-content>h2{
+        grid-area: titulo;
+
+    }
+    .ventana__modal-content>p{
+    grid-area: subtitulo;
+    }
+    .plato_1{
+        grid-area: plato_1;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_2{
+        grid-area: plato_2;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_3{
+        grid-area: plato_3;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_4{
+        grid-area: plato_4;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_4{
+        grid-area: plato_4;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_5{
+        grid-area: plato_5;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_6{
+        grid-area: plato_6;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .content__plato>img{
+        width: 130px;
+        height: 120px;
+    }
+}
+@media screen and (min-width:1000px) {
+    .ventana__modal{
+        overflow: hidden;
+    }
+    .ventana__modal-content{
+        display: grid;
+        grid-template-areas:
+        "titulo titulo titulo"
+        "subtitulo subtitulo subtitulo"
+        "plato_1 plato_2 plato_3"
+        "plato_4 plato_5 plato_6";
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(2,80px) repeat(2,1fr);  
+        scroll-padding: 0;
+        scrollbar-width: 0;
+        overflow:scroll;
+        overflow-x: hidden;
+    }
+
+    .content__plato>img{
+        width: 160px;
+        height: 150px;
+    }
+}

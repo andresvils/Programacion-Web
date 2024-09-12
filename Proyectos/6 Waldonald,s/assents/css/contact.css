@@ -254,8 +254,9 @@ input[type="checkbox"]{
 }
 .boton__terms-close{
     z-index: 10;
-    position: sticky;
-    transform: translate(-9%,-1773%);
+    position: absolute;
+    top:0;
+    left:81.5%;
     border: 5px groove var(--color-secundario);
     background-color: var(--color-barras);
 }
@@ -275,8 +276,8 @@ input[type="checkbox"]{
     border:5px groove var(--color-secundario);
     width: 80%;
     height: 80%;
-    top: 20px;
-    left: 40px;
+    top:0;
+    left:10%;
     overflow: scroll;
 }
 .form__modal-content{
@@ -291,7 +292,11 @@ input[type="checkbox"]{
 .check_terms:has(.check_terms:not(:checked)) ~ .form__modal{
     display: none;
 }
-
+@media screen and (min-width:768px) {
+    .boton__terms-close{
+        left:83%;
+    }
+}
 /* ************************************/
 /*                                    */
 /*            Footer                  */
