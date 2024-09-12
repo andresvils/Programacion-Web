@@ -49,6 +49,7 @@ body{
     position: relative;
     z-index: 10;
     border-radius: 0px 0px 10px 10px;
+
 }
 .header__open-nav-button{
     color: var(--color-principal);
@@ -102,7 +103,7 @@ body{
     text-decoration: none;
 }
 
-@container header (min-width:600px){
+@container header (min-width:720px){
     .header__nav{
         margin: 0;
         display: block;
@@ -245,8 +246,9 @@ input[type="checkbox"]{
     border: 2px solid var(--color-secundario);
 }
 .boton__terms-open{
-    padding: 20px;
-    padding-left: 22vw;
+    position: absolute;
+    top: 83%;
+    left: 24%;
     cursor:pointer;
 
 }
@@ -259,7 +261,7 @@ input[type="checkbox"]{
 }
 .terms{
     color: var(--color-principal);
-    margin-left: 45vw;
+    margin-left: 46%;
     border: 2px solid var(--color-principal);
     border-radius: 50%;
     padding: 4px;
@@ -295,43 +297,3 @@ input[type="checkbox"]{
 /*            Footer                  */
 /*                                    */
 /* ************************************/
-.footer{
-    grid-area: footer;
-    background-color: var(--color-barras);
-    width: 100%;
-    color:#fff;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    font-style:italic;
-    font-weight: bold;
-    border-radius: 5px 5px 0px 0px;
-}
-.footer__contact{
-    height: 75%;
-}
-.footer h3{
-    text-align: center;
-    margin: 3%;
-    color: var(--color-principal);
-}
-.footer__contact > p{
-    font-size: .8rem;
-    text-align: start;
-    color: var(--color-secundario);
-}
-.footer__networks{
-    height: 90%;
-    gap:10px;
-    text-align: center;
-}
-img{
-    width: 10%;
-    margin: 10px 20px;
-}
-.footer > .footer__contact ~ span{
-    font-size: 1px;
-}
