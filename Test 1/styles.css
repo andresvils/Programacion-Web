@@ -18,16 +18,14 @@
 .grid{
     flex-grow: 1;
     display: grid;
-    grid-template-columns:1fr; 
-    grid-template-rows:1fr;
+    grid-template-columns: minmax(200px,1fr);
+    grid-template-rows: 10vh 80vh 10vh;
     grid-auto-flow: dense;
     margin: auto;
-    grid-template-areas:
+    grid-template-areas: 
+    "header"
     "main"
-    "aside"
     "footer";
-    max-width: 1400px;
-    margin: auto;
 }
 
 div,ul,nav,header,footer,a,li,ul,label{
@@ -35,11 +33,13 @@ div,ul,nav,header,footer,a,li,ul,label{
     padding: 0;
 }
 body{
+    background-color: var(--color-fondo);
+    color: var(--color-barras);
+    display: flex;
     margin: 0;
 }
 .header{
-    background-color: var(--color-barras);
-    width: 100%;
+    grid-area: header;
     background-color: var(--color-barras);
     display: flex;
     justify-content: space-between;
@@ -101,7 +101,7 @@ body{
     text-decoration: none;
 }
 
-@container header (min-width:600px){
+@container header (min-width:720px){
     .header__nav{
         margin: 0;
         display: block;
@@ -138,105 +138,145 @@ body{
     
 }
 
+
 /* ************************************/
 /*                                    */
-/*              Main                 */
+/*          Main  Animation           */
 /*                                    */
 /* ************************************/
 
 main{
     grid-area: main;
-    height: 40vh;
-    width: 100%;
-    overflow-y:scroll;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
+    animation: fase auto linear delay;
+    animation-timeline: scroll(root block);
 }
-.section__locales{
+
+
+/* ************************************/
+/*                                    */
+/*        Animation Step 1            */
+/*                                    */
+/* ************************************/
+.animation-2{
+    display: none;
+}
+.animation-3{
+    display: none;
+}
+.animation-4{
+    display: none;
+}
+.animation-5{
+    display: none;
+}
+.animation__step-1{
+    background-color: #000;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
     display: flex;
     flex-flow: column nowrap;
-    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    
+}
+.main > .animation__step-1 > div > div >div>img{
+    width: 100px;
+    height: 100px;
+}
+.main > .animation__step-1 > div > div >div{
     background-color: var(--color-principal);
-}
-h2{
-    font-size: 20px;
-}
-p{
-    padding: 0px 10px;
-}
-
-.section__locales-title{
-    text-align: center;
-    top: 0;
-    background-color: var(--color-fondo);
-    margin: 15px 100px;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 20px;
-}
-.section__locales-local{
-    font-size: 15px;
-    text-align: center;
-    padding: 3px 10px;
-    margin: 10px;
-    position: relative;
-    font-weight: bold;
-}
-
-.local__front,.local__back{
-    backface-visibility: hidden;
-    transition: transform 1s linear ;
-    overflow: hidden;
-    background-color: var(--color-barras);
-    color: var(--color-fondo);
-    border-radius: 90px;
-    border: 4px solid var(--color-secundario);
+    border-radius: 50%;
+    padding:15px ;
+    outline:5px solid var(--color-secundario);
 
 }
-.local__back{
-    background-color: var(--color-secundario);
+.main > .animation__step-1 >h2{
+    margin: 0;
+}
+.animation__title{
+    z-index: 10;
     color: var(--color-principal);
-    border-radius: 90px;
-    border: 6px solid var(--color-fondo);
+    font-size: 3rem;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 0, 0.767))drop-shadow(0px 0px 20px rgba(255, 255, 0, 0.671));
+}
+.animation__icons{
+    z-index: 10;
+    color: var(--color-secundario);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 70px;
+}
+.animation__icons >div>h3{
+    filter: drop-shadow(0px 0px 9px rgba(255, 0, 0, 0.856))drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.795));
+}
 
-}
-.section__locales-local:hover .local__front{
-    transform: perspective(1200px) rotatex(180deg);
-}
-.section__locales-local:hover .local__back{
-    transform: perspective(1200px) rotatex(360deg);
-}
-.local__front{
-    transform: perspective(1200px) rotatex(0deg);
-}
-.local__back{
+.animation__step-1::before {
+    content: '';
     position: absolute;
-    transform: perspective(1200px) rotatex(180deg);
     top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    filter: drop-shadow(0px 0px 5px #ffffffe7) drop-shadow(0px 0px 6px #ffffffd3)drop-shadow(0px 0px 7px #ffffffa1) ;
+    animation: moveStars 50s linear infinite;
 }
+
+@keyframes moveStars {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
 /* ************************************/
 /*                                    */
-/*              Aside                 */
+/*        Animation Step 1            */
 /*                                    */
 /* ************************************/
-
-
-aside{
-    grid-area: aside;
-    height: 40vh;
-    background-color: #45474B;
-}
-iframe{
+.animation__step-2{
+    background-color: #CF4647;
     width: 100%;
-    height: 39vh;
+    height: 80vh;
+    text-align: center;
 }
+.animation__step-3{
+    background-color: #d9e623;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+.animation__step-4{
+    background-color: #4c16e0;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+.animation__step-4{
+    background-color: #25e00c;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+
+
+
 /* ************************************/
 /*                                    */
-/*              Footer                */
+/*             footer                 */
 /*                                    */
 /* ************************************/
 
 footer{
     grid-area: footer;
-    height: 20vh;
-    background-color: #45474B;
+    background-color: var(--color-barras);
 }

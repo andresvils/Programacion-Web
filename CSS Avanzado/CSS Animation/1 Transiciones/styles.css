@@ -1,35 +1,35 @@
 body {
-    margin:0;
-    font-family:sans-serif;
-    background-color:#ccc;
-}
-div{
-    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
 }
 .box{
-    background-color: #fff;
-    margin: 20px;
-    border: 4px solid #48e;
-    padding: 6px;
-    border-radius: 39px;
-    transition: border .6s steps(12);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
 }
+.box:hover .barra{
+    opacity: 1;
+}
+
 .barra{
-    padding: 40px;
-    background-color: #48e;
-    border-radius: 30px;
-    width: 10%;
-    transition: width .6s steps(12),background-color .6s steps(12);
+    width: 50px;
+    height: 50px;
+    background-color: #09f;
+    border-radius: 50%;
+    position: relative;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    opacity: 0;
 }
-.barra:active{
-    width: 100%;
-    transition-duration: 3s;
-    background-color: #f33;
+.barra:first-child{
+    transition-delay:0ms ;
 }
-.box:has(.barra:active){
-    border:4px solid #f33
+.barra:nth-child(2){
+    transition-delay: 300ms;
 }
-.box:has(.barra:active){
-    border:4px solid #f33;
-    transition-duration: 3s;
+.barra:nth-child(3){
+    transition-delay: 600ms;
 }

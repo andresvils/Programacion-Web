@@ -19,7 +19,7 @@
     flex-grow: 1;
     display: grid;
     grid-template-columns: minmax(200px,1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
     grid-auto-flow: dense;
     margin: auto;
     grid-template-areas: 
@@ -138,3 +138,131 @@ body{
     
 }
 
+
+/* ************************************/
+/*                                    */
+/*          Main  Animation           */
+/*                                    */
+/* ************************************/
+
+main{
+    grid-area: main;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+/* ************************************/
+/*                                    */
+/*        Animation Step 1            */
+/*                                    */
+/* ************************************/
+
+.animation__step-1{
+    background-color: #000;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    
+}
+.main > .animation__step-1 > div > div >div>img{
+    width: 100px;
+    height: 100px;
+}
+.main > .animation__step-1 > div > div >div{
+    background-color: var(--color-principal);
+    border-radius: 50%;
+    padding:15px ;
+    outline:5px solid var(--color-secundario);
+
+}
+.main > .animation__step-1 >h2{
+    margin: 0;
+}
+.animation__title{
+    z-index: 10;
+    color: var(--color-principal);
+    font-size: 3rem;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 9px rgba(255, 255, 0, 0.767))drop-shadow(0px 0px 20px rgba(255, 255, 0, 0.671));
+}
+.animation__icons{
+    z-index: 10;
+    color: var(--color-secundario);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 70px;
+}
+.animation__icons >div>h3{
+    filter: drop-shadow(0px 0px 9px rgba(255, 0, 0, 0.856))drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.795));
+}
+
+.animation__step-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    filter: drop-shadow(0px 0px 5px #ffffffe7) drop-shadow(0px 0px 6px #ffffffd3)drop-shadow(0px 0px 7px #ffffffa1) ;
+    animation: moveStars 50s linear infinite;
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+/* ************************************/
+/*                                    */
+/*        Animation Step 1            */
+/*                                    */
+/* ************************************/
+.animation__step-2{
+    background-color: #CF4647;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+.animation__step-3{
+    background-color: #d9e623;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+.animation__step-4{
+    background-color: #4c16e0;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+.animation__step-4{
+    background-color: #25e00c;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+
+
+
+/* ************************************/
+/*                                    */
+/*             footer                 */
+/*                                    */
+/* ************************************/
+
+footer{
+    grid-area: footer;
+    background-color: var(--color-barras);
+}

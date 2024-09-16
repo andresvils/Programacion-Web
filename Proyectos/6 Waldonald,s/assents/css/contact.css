@@ -256,7 +256,7 @@ input[type="checkbox"]{
     z-index: 10;
     position: absolute;
     top:0;
-    left:81.5%;
+    left:83%;
     border: 5px groove var(--color-secundario);
     background-color: var(--color-barras);
 }
