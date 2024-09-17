@@ -47,7 +47,7 @@ body{
     container-type: inline-size;
     container-name:header ;
     position: relative;
-    z-index: 10;
+    z-index: 15;
 }
 .header__open-nav-button{
     color: var(--color-principal);
