@@ -152,7 +152,7 @@ main{
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
-    background-color: #000;
+    background-color:#000;
 }
 
 
@@ -238,7 +238,7 @@ main{
 /*                                    */
 /* ************************************/
 .animation:nth-child(2){
-    background-color:#38b9ec;
+    background-color: #000;
     grid-template-areas:
     "title"
     "corona";
@@ -251,18 +251,15 @@ main{
 }
 
 .animation__step-2::before {
-    z-index: -2;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 200%;
     height: 100%;
-    background: url('../images/test_1.png')repeat;
-    background-position: top;
-    background-size: cover;
-    filter: drop-shadow(0px 0px 5px #fdfdfd) drop-shadow(0px 0px 6px #fdfdfd) contrast(90%) grayscale(200%) opacity(0.88);
-    animation: moveStars 60s linear infinite;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    filter: drop-shadow(0px 0px 5px #ffffffe7) drop-shadow(0px 0px 6px #ffffffd3)drop-shadow(0px 0px 7px #ffffffa1) ;
+    animation: moveStars 50s linear infinite;
 }
 .main>.animation:nth-child(2)>h2{
     grid-area: title;
@@ -271,7 +268,7 @@ main{
     align-items: center;
     justify-content: center;
     color: var(--color-secundario);
-    filter: none;
+    filter: drop-shadow(0px 0px 9px rgba(255, 51, 0, 0.767))drop-shadow(0px 0px 20px rgba(255, 51, 0, 0.671));
 }
 .main > .animation:nth-child(2) > .animation__content{
     grid-area: corona;
@@ -351,20 +348,70 @@ main{
     animation-delay: 18s;
 }
 
-@keyframes exitar {
 
-    to{
-        height: 89%;
-    }
-}
 /* ************************************/
 /*                                    */
-/*        Animation Step 2            */
+/*        Animation Step 3            */
 /*                                    */
 /* ************************************/
+
 .animation:nth-child(3){
-    background-color: #d9e623;
+    background-color:#38b9ec;
+    z-index: 20;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
 }
+.animation__step-3::before {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('../images/test_1.png')repeat;
+    background-position: top;
+    background-size: cover;
+    filter: drop-shadow(0px 0px 5px #fdfdfd) drop-shadow(0px 0px 6px #fdfdfd) contrast(90%) grayscale(200%) opacity(0.8);
+    animation: moveStars 8s linear infinite;
+}
+.animation:nth-child(3) > h2 {
+    grid-column: 2 ;
+    grid-row: 1;
+    color: var(--color-principal);
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+.animation:nth-child(3) > img{
+    width: 150px;
+}
+.dron_1{
+    grid-column: 3;
+    grid-row: 2;
+}
+.dron_2{
+    grid-column: 2;
+    grid-row: 3;
+}
+.dron_3{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* ************************************/
+/*                                    */
+/*        Animation Step 4            */
+/*                                    */
+/* ************************************/
+
 .animation:nth-child(4){
     background-color: #4c16e0;
 
@@ -385,6 +432,7 @@ main{
         scale: 1;
     }
 }
+
 
 /* ************************************/
 /*                                    */
