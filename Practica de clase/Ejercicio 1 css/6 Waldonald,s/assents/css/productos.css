@@ -1,0 +1,580 @@
+@import url(global.css);
+.grid{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 10vh auto 80vh 10vh;
+    grid-auto-flow: dense;
+    margin: auto;
+    grid-template-areas: 
+    "header"
+    "aside""main"
+    "footer";
+}
+
+
+/* ************************************/
+/*                                    */
+/*              Aside                 */
+/*                                    */
+/* ************************************/
+.sidebar{
+    z-index: 2;
+    grid-area: aside;
+    background-color: var(--color-barras);
+    position: fixed;
+    height: 100dvh;
+    width: fit-content;
+    font-size: clamp(.2rem,1.4vw,3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.sidebar__form{
+    position: absolute;
+    z-index: 20;
+    right: -3.5rem;
+    top: 260px;
+}
+.sidebar__form .open-button{
+    display: none;
+}
+.sidebar label{
+    position: relative;
+    color:  #F4CE14;
+    background-color: #45474B;
+    font-size: 2.4rem;
+    border-radius: 0px 50px 50px 0px;
+    padding: .7rem;
+    padding-left: .9rem;
+    user-select: none;
+}
+
+
+.sidebar:has(input[type="checkbox"]:checked){
+    width: clamp(200px,26dvw,800px);
+}
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__form label{
+    display: none;
+}
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__form .open-button{
+    display: block;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar__item a,.profile-option){
+    display: none;
+
+}
+/* ************************************/
+/*                                    */
+/*              Main                  */
+/*                                    */
+/* ************************************/
+
+main{
+    font-family: var(--fuente-texto);
+    grid-area: main;
+    background-color: var(--color-fondo);
+    position: relative;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    height:100%;
+    align-items:center;
+    align-content:center;
+    justify-items:center;
+    justify-content:center;
+}
+.content__carrusel{
+    width: 30vh;
+    height: 90%;
+    border:10px solid var(--color-barras);
+    border-bottom: 34px solid var(--color-barras);
+    border-radius: 10%;
+    position: relative;
+}
+
+.almuerzo{
+    background-image: url(../images/almuerzo/pexels-catscoming-1907244.jpg);  
+    background-size:cover;
+    background-position: center;
+    clip-path: inset(0 0 0 0);
+    animation: almuerzo 36s ease-out 1s infinite;
+}
+
+
+.desayuno{
+    background-image: url(../images/desayuno/pexels-ash-craig-122861-376464.jpg);
+    background-size:cover ;
+    background-position: center;
+    clip-path: inset(0 0 0 0);
+    animation: desayuno 36s ease-out 2s infinite;
+}
+.cena{
+    background-image: url(../images/cena/pexels-andra-325634-918581.jpg);
+    background-size:cover ;
+    background-position: center;
+    clip-path: inset(0 0 0 0);
+    animation: cena 36s ease-out 3s infinite;
+}
+
+@keyframes almuerzo {
+    0%{
+        background-image: url(../images/almuerzo/pexels-catscoming-1907244.jpg);
+    }
+    20%{
+        background-image: url(../images/almuerzo/pexels-catscoming-750947.jpg);
+    }
+    40%{
+        background-image: url(../images/almuerzo/pexels-kei-photo-1420806-2741448.jpg);
+    }
+    60%{
+        background-image: url(../images/almuerzo/pexels-makafood-82669418-8980376.jpg);
+    }
+    80%{
+        background-image: url(../images/almuerzo/pexels-mdsnmdsnmdsn-2821743.jpg);
+    }
+    100%{
+        background-image: url(../images/almuerzo/pexels-shliftik-7333163.jpg);
+    }
+}
+@keyframes desayuno {
+    0%{
+        background-image: url(../images/desayuno/pexels-ash-craig-122861-376464.jpg);
+    }
+    20%{
+        background-image: url(../images/desayuno/pexels-iina-luoto-460132-1211887.jpg);
+    }
+    40%{
+        background-image: url(../images/desayuno/pexels-janetrangdoan-1099680.jpg);
+    }
+    60%{
+        background-image: url(../images/desayuno/pexels-lum3n-44775-1410236.jpg);
+    }
+    80%{
+        background-image: url(../images/desayuno/pexels-pixabay-414262.jpg);
+    }
+    100%{
+        background-image: url(../images/desayuno/pexels-vojtech-okenka-127162-1055272.jpg);
+    }
+}
+@keyframes cena {
+    0%{
+        background-image: url(../images/cena/pexels-andra-325634-918581.jpg);
+    }
+    20%{
+        background-image: url(../images/cena/pexels-horizon-content-2100060-3738730.jpg);
+    }
+    40%{
+        background-image: url(../images/cena/pexels-jonathanborba-2983104.jpg);
+    }
+    60%{
+        background-image: url(../images/cena/pexels-myfoodie-2702674.jpg);
+    }
+    80%{
+        background-image: url(../images/cena/pexels-valeriya-1893558.jpg);
+    }
+    100%{
+        background-image: url(../images/cena/pexels-yungsaac-2119758.jpg);
+    }
+}
+@media screen and (min-width:800px){
+    .content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+        height:100%;
+    }
+    .content__carrusel{
+        width: 20vw;
+        height: 19vw;
+    }
+    .content__carrusel:first-child{
+        align-self:flex-start;
+    }
+    .content__carrusel:nth-child(2){
+        align-self:center;
+    }
+    .content__carrusel:nth-child(3){
+        align-self:flex-end;
+    }
+    
+}
+/* ************************************/
+/*                                    */
+/*        Ventana Modal de main       */
+/*                                    */
+/* ************************************/
+
+.ventana__modal{
+    z-index: 20;
+    position: absolute;
+    top:5%;
+    left: 10%;
+    width: 80dvw;
+    height: 80dvh;
+    background-color: var(--color-barras);
+    outline:10px solid var(--color-barras);
+    border: 10px solid var(--color-principal);
+    filter: drop-shadow(0px 0px 3px black);
+    overflow:scroll;
+    scrollbar-width: 0;
+    display:none;
+}
+
+.comida-checkbox{
+    display: none;
+}
+.boton__open{
+    z-index:1;
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    width: 28vh;
+    border-radius: 0px 0px 19px 19px;
+    background-color: var(--color-principal);
+    border: 5px solid var(--color-barras);
+    place-content: center;
+    left: auto;
+}
+.almuerzo-boton_open{
+    top: 23.9%;
+}
+.desayuno-boton_open{
+    top: 56.8%;
+}
+.cena-boton_open{
+    top: 90.3%;
+
+}
+.boton__close{
+    z-index: 30;
+    text-align: center;
+    width: 20px;
+    background-color: var(--color-barras);
+    color: var(--color-principal);
+    outline: 9px groove var(--color-principal);
+    display: block;
+    position: absolute;
+    top:4.8%;
+    left: 9.8%;
+}
+
+.almuerzo-checkbox:checked ~ .ventana-almuerzo{
+    display: block;
+}
+.almuerzo-checkbox:not(:checked)~.almuerzo-boton_close{
+    display: none;
+}
+
+.desayuno-checkbox:checked ~ .ventana-desayuno{
+    display: block;
+}
+.desayuno-checkbox:not(:checked)~.desayuno-boton_close{
+    display: none;
+}
+
+.cena-checkbox:checked ~ .ventana-cena{
+    display: block;
+}
+.cena-checkbox:not(:checked)~.cena-boton_close{
+    display: none;
+}
+
+
+.ventana__modal-content{
+    text-align: center;
+    font-family: var(--fuente-texto);
+    display: flex;
+    flex-flow: column nowrap;
+    width:100%;
+    height:100%;
+    overflow:scroll;
+    scrollbar-width: 0;
+}
+@keyframes parpadeo-1 {
+    0% {
+        text-shadow: 
+            0 0 3px #FF0000,    
+            0 0 7px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 15px #FF0000,   
+            0 0 19px #FF0000,   
+            0 0 24px #FF0000;
+        opacity: 1;
+    }
+    50% {
+        text-shadow: 
+            0 0 1px #FF0000,    
+            0 0 3px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 7px #FF0000,   
+            0 0 10px #FF0000,   
+            0 0 12px #FF0000;
+        opacity: 0.5;
+    }
+    100% {
+        text-shadow: 
+            0 0 3px #FF0000,    
+            0 0 7px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 15px #FF0000,   
+            0 0 19px #FF0000,   
+            0 0 24px #FF0000;
+        opacity: 1;
+    }
+}
+@keyframes parpadeo-2{
+    0% {
+        text-shadow: 
+            0 0 3px #FF0000,    
+            0 0 7px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 15px #FF0000,   
+            0 0 19px #FF0000,   
+            0 0 24px #FF0000;
+        opacity: 1;
+    }
+    20% {
+        text-shadow: 
+            0 0 2px #FF0000,    
+            0 0 5px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 10px #FF0000,   
+            0 0 12px #FF0000,   
+            0 0 16px #FF0000;
+        opacity: 0.7;
+    }
+    40% {
+        text-shadow: 
+            0 0 1px #FF0000,    
+            0 0 3px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 7px #FF0000,   
+            0 0 10px #FF0000,   
+            0 0 12px #FF0000;
+        opacity: 0.3;
+    }
+    60% {
+        text-shadow: 
+            0 0 2px #FF0000,    
+            0 0 5px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 10px #FF0000,   
+            0 0 14px #FF0000,   
+            0 0 18px #FF0000;
+        opacity: 0.7;
+    }
+    80% {
+        text-shadow: 
+            0 0 1px #FF0000,    
+            0 0 3px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 7px #FF0000,   
+            0 0 10px #FF0000,   
+            0 0 12px #FF0000;
+        opacity: 0.5;
+    }
+    100% {
+        text-shadow: 
+            0 0 3px #FF0000,    
+            0 0 7px #FF0000,   
+            0 0 1px #FF0000,   
+            0 0 15px #FF0000,   
+            0 0 19px #FF0000,   
+            0 0 24px #FF0000;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+.ventana__modal-content > h2,p{
+    color: #FF0000; /* Rojo brillante */
+    text-shadow: 
+        0 0 3px #FF0000,    /* Resplandor de brillo interno */
+        0 0 7px #FF0000,   /* Resplandor más amplio */
+        0 0 1px #FF0000,   /* Resplandor más amplio */
+        0 0 15px #FF0000,   /* Resplandor aún más amplio */
+        0 0 19px #FF0000,   /* Resplandor extenso */
+        0 0 24px #FF0000;   /* Resplandor máximo */
+    font-weight: 900;
+    letter-spacing: 6px;
+}
+.ventana__modal-content > h2{
+    font-size: 50px;
+    margin: 0;
+    animation: parpadeo-1 3.5s ease-out   infinite
+}
+.ventana__modal-content > p{
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 25px;
+    animation: parpadeo-1 2.5s ease-out  infinite
+}
+
+.content__plato{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin:10px 20px;
+}
+.content__plato img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 9px solid #fff;
+    outline: 1px solid #0000;
+}
+
+.content__plato input{
+    display: none;
+}
+.content__plato label{
+    text-align: center;
+    border:4px solid var(--color-principal);
+    outline: 1px solid #000;
+    outline-offset: -4px;
+    border-radius: 8px;
+    color: #000;
+    padding: 5px 10px;
+    width: 90px;
+    font-weight: bold;
+}
+
+.close{
+    background-color: rgb(253, 61, 61) ;
+    display: none;
+}
+.add{
+    background-color: rgb(16, 236, 64);
+    display: none;
+}
+
+.content__plato > input[type="checkbox"]:not(:checked) ~ .add{
+    display: block;
+}
+.content__plato > input[type="checkbox"]:not(:checked) ~ .add{
+    display: block;
+}
+.content__plato > input[type="checkbox"]:checked ~ .close{
+    display: block;
+}
+
+
+
+@media screen and (min-width:500px) {
+    .ventana__modal{
+        overflow: hidden;
+    }
+    .ventana__modal-content{
+        display: grid;
+        grid-template-areas:
+        "titulo titulo"
+        "subtitulo subtitulo"
+        "plato_1 plato_2"
+        "plato_3 plato_4"
+        "plato_5 plato_6";
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,80px) repeat(3,1fr);  
+        scroll-padding: 0;
+        scrollbar-width: 0;
+        overflow:scroll;
+        overflow-x: hidden;
+    }
+    .ventana__modal-content>h2{
+        grid-area: titulo;
+
+    }
+    .ventana__modal-content>p{
+    grid-area: subtitulo;
+    }
+    .plato_1{
+        grid-area: plato_1;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_2{
+        grid-area: plato_2;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_3{
+        grid-area: plato_3;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_4{
+        grid-area: plato_4;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_4{
+        grid-area: plato_4;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_5{
+        grid-area: plato_5;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .plato_6{
+        grid-area: plato_6;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .content__plato>img{
+        width: 130px;
+        height: 120px;
+    }
+}
+@media screen and (min-width:1000px) {
+    .ventana__modal{
+        overflow: hidden;
+    }
+    .ventana__modal-content{
+        display: grid;
+        grid-template-areas:
+        "titulo titulo titulo"
+        "subtitulo subtitulo subtitulo"
+        "plato_1 plato_2 plato_3"
+        "plato_4 plato_5 plato_6";
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(2,80px) repeat(2,1fr);  
+        scroll-padding: 0;
+        scrollbar-width: 0;
+        overflow:scroll;
+        overflow-x: hidden;
+    }
+
+    .content__plato>img{
+        width: 160px;
+        height: 150px;
+    }
+}
