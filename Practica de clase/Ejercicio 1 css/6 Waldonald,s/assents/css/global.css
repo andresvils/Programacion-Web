@@ -146,3 +146,63 @@ body{
     font-family: var(--fuente-texto);
     background-color: var(--color-barras);
 }
+.footer{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.footer>.img{
+    width:3rem;
+    height: 3rem;
+    position: relative;
+}
+.img:first-child{
+    background-image: url("../images/redes/logotipo-de-gmail.png");
+    background-size: cover;
+    &:hover{
+        filter:drop-shadow(0px 0px 1px rgba(209, 28, 28, 0.938))drop-shadow(0px 0px 1px rgba(209, 28, 28,  0.938))drop-shadow(0px 0px 1px rgba(209, 28, 28,  0.938));
+    }
+}
+
+.img:nth-child(2){
+    background-image: url(../images/redes/facebook.png);
+    background-size: cover;
+    &:hover{
+        filter:drop-shadow(0px 0px 1px rgba(28, 106, 209, 0.938))drop-shadow(0px 0px 1px rgba(28, 106, 209, 0.938))drop-shadow(0px 0px 1px rgba(28, 106, 209, 0.938));
+    }
+}
+.img:nth-child(3){
+    background-image: url(../images/redes/gorjeo.png);
+    background-size: cover;
+    &:hover{
+        filter:drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.938))drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.938))drop-shadow(0px 0px 1px rgba(0, 0, 0,0.938));
+    }
+}
+.img:nth-child(4){
+    background-image: url(../images/redes/instagram.png);
+    background-size: cover;
+    &:hover{
+        filter:drop-shadow(0px 0px 1px rgba(199, 12, 99, 0.938))drop-shadow(0px 0px 1px rgba(199, 12, 99, 0.938))drop-shadow(0px 0px 1px rgba(199, 12, 99, 0.938));
+    }
+}
+.img:nth-child(5){
+    background-image: url(../images/redes/tik-tok.png);
+    background-size: cover;
+    &:hover{
+        filter:drop-shadow(0px 0px 1px rgba(36, 228, 202, 0.938))drop-shadow(0px 0px 1px rgba(36, 228, 202, 0.938))drop-shadow(0px 0px 1px rgba(36, 228, 202, 0.938));
+    }
+}
+.img:nth-child(6){
+    background-image: url(../images/redes/whatsapp.png);
+    background-size: cover;
+    &:hover{
+        filter:drop-shadow(0px 0px 1px rgba(43, 241, 3, 0.938))drop-shadow(0px 0px 1px rgba(43, 241, 3, 0.938))drop-shadow(0px 0px 1px rgba(43, 241, 3, 0.938));
+    }
+
+}
+.footer>.img:hover{
+    scale: 1.4;
+}

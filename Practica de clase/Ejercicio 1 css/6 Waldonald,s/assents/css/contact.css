@@ -3,7 +3,7 @@
     flex-grow: 1;
     display: grid;
     grid-template-columns: minmax(200px,1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 10vh 80vh 10vh;
     grid-auto-flow: dense;
     margin: auto;
     grid-template-areas: 
@@ -26,6 +26,9 @@
     color: var(--color-fondo);
     background:var(--color-fondo);
     align-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 h2{
@@ -37,6 +40,7 @@ h2{
     padding: 10px;
 }
 form{
+    border: 2px solid var(--color-principal);
     background-color: var(--color-barras);
     padding:20px 0;
     max-width: 500px;
@@ -169,3 +173,4 @@ input[type="checkbox"]{
         left:83%;
     }
 }
+
