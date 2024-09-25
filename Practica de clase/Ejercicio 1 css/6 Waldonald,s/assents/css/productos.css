@@ -90,32 +90,20 @@ main{
     align-content:center;
     justify-items:center;
     justify-content:center;
-
 }
 
-.content{
-    display: grid;
-    position: absolute;
-    top: 0;
-    left: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,1fr);
-    height:100%;
-    width: 100%;
-    align-items:center;
-    align-content:center;
-    justify-items:center;
-    justify-content:center;
-}
+
 .content__carrusel{
     width: 30vh;
     height: 90%;
     border:10px solid var(--color-barras);
     border-radius: 10%;
     position: relative;
+    grid-column: 1;
 }
 
 .almuerzo{
+    grid-row: 1;
     background-image: url(../images/almuerzo/pexels-catscoming-1907244.jpg);  
     background-size:cover;
     background-position: center;
@@ -125,6 +113,7 @@ main{
 
 
 .desayuno{
+    grid-row: 2;
     background-image: url(../images/desayuno/pexels-ash-craig-122861-376464.jpg);
     background-size:cover ;
     background-position: center;
@@ -132,6 +121,7 @@ main{
     animation: desayuno 36s ease-out 2s infinite;
 }
 .cena{
+    grid-row: 3;
     background-image: url(../images/cena/pexels-andra-325634-918581.jpg);
     background-size:cover ;
     background-position: center;
@@ -200,32 +190,23 @@ main{
     }
 }
 @media screen and (min-width:800px){
-    
-    .content{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
-        height:100%;
-    }
+
     .content__carrusel{
         width: 20vw;
         height: 19vw;
+        grid-row: 2;
     }
-    .content__carrusel:first-child{
+    .almuerzo{
         align-self:flex-end;
         grid-column: 1;
-        grid-row: 2;
     }
-    .content__carrusel:nth-child(2){
+    .desayuno{
         grid-column: 2;
-        grid-row: 2;
         align-self:flex-end;
     }
-    .content__carrusel:nth-child(3){
+    .cena{
         grid-column: 3;
-        grid-row: 2;
         align-self:flex-end;
- 
     }
 }
 /* ************************************/
@@ -262,12 +243,13 @@ main{
     border: 5px solid var(--color-barras);
     width: 30vh;
     text-align: center;
-}
+    grid-column: 1;
+} 
 .almuerzo-boton_open{
     grid-row: 1;
 }
 .desayuno-boton_open{
- grid-row: 2;
+    grid-row: 2;
 }
 .cena-boton_open{
     grid-row: 3;
@@ -603,22 +585,20 @@ main{
     
     .boton__open{
         width: 20vw;
-        height: 3.8vh;
+        height: 3.4vh;
+        grid-row: 2;
     }
     .almuerzo-boton_open{
         grid-column: 1;
-        grid-row: 2;
         align-self: flex-end;
     }
     .desayuno-boton_open{
         grid-column: 2;
-        grid-row: 2;
         align-self: flex-end;
 
     }
     .cena-boton_open{
         grid-column: 3;
-        grid-row: 2;
         align-self: flex-end;
     }
 }

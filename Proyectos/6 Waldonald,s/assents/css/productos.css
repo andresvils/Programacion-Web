@@ -1,26 +1,9 @@
-
-@font-face{
-    font-family: "Montez";
-    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
-    font-weight: 400;
-}
-*{
-    box-sizing: border-box;
-}
-:root{
-    --color-principal:#F4CE14;
-    --color-secundario:#CF4647;
-    --color-fondo:#F5F7F8;
-    --color-barras:#45474B;
-    --fuente-navbar:clamp(1.6rem,4vw,4rem);
-    --fuente-texto:"Montez";
-}
-
+@import url(global.css);
 .grid{
     flex-grow: 1;
     display: grid;
-    grid-template-columns: minmax(200px,1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 10vh auto 80vh 10vh;
     grid-auto-flow: dense;
     margin: auto;
     grid-template-areas: 
@@ -29,121 +12,7 @@
     "footer";
 }
 
-div,ul,nav,header,footer,a,li,ul,label,p,h2,img{
-    margin: 0 ;
-    padding: 0 ;
-}
-body{
-    background-color: var(--color-fondo);
-    color: var(--color-barras);
-    display: flex;
-    margin: 0;
-}
-/* ************************************/
-/*                                    */
-/*              Header                */
-/*                                    */
-/* ************************************/
-.header{
-    font-family: var(--fuente-texto);
-    grid-area: header;
-    background-color: var(--color-barras);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    container-type: inline-size;
-    container-name:header ;
-    position: relative;
-    z-index: 10;
-}
-.header__open-nav-button{
-    color: var(--color-principal);
-    position: absolute;
-    font-size: 32px !important;
-    font-weight: 0.1rem !important;
-    right: 19px;
-}
 
-.header__checkbox{
-    display: none;
-}
-.header__nav{
-    display: none;
-    background-color:var(--color-barras);
-    position: absolute;
-    height: 50vh;
-    width: 100vw;
-    top:0;
-    z-index: -1;
-}
-.header__nav-list{
-    display: flex;
-    flex-direction: column;
-    height: 35vh;
-    margin: auto;
-    align-items: center;
-    justify-items: center;
-    justify-content:space-around ;
-    padding: 0;
-    margin-bottom: 40px;
-}
-.header__checkbox:checked ~ .header__nav{
-    display: flex;
-}
-.header__logo{
-    max-width: 100%;
-    width: 80px;
-    height: 60px;
-    margin: 10px 20px;
-}
-.header__nav-item{
-    list-style: none;
-}
-.header__nav-item a{
-    color:var(--color-principal);
-    font-size: var(--fuente-navbar);
-    font-weight:bold;
-}
-.header__nav-item a:not(:is(:hover,:active)){
-    text-decoration: none;
-}
-
-@container header (min-width:720px){
-    .header__nav{
-        margin: 0;
-        display: block;
-        position: static;
-        height: auto;
-        width: auto;
-        justify-content: space-between;
-    }
-    .header__nav-list{
-        flex-direction: row;
-        height: auto;
-        width: auto;
-        gap: 20px;
-        margin: auto;
-        margin-right: 40px;
-    }
-    .header__open-nav-button{
-        display: none !important;
-    }
-    .header__nav-list{
-        display: grid;
-        flex-direction: row;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: (1,1fr);
-        grid-auto-flow: dense;
-        width: 600px;
-        gap: 30px;
-        align-items: center;
-        justify-items: center;
-    }
-    .header__nav-item  a{
-        font-size: 1.2rem;
-    }
-    
-}
 /* ************************************/
 /*                                    */
 /*              Aside                 */
@@ -211,31 +80,30 @@ input[type="checkbox"]{
 main{
     font-family: var(--fuente-texto);
     grid-area: main;
-    height: 100dvh;
     background-color: var(--color-fondo);
     position: relative;
-}
-
-.content{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,1fr);
     height:100%;
-    align-items:center;
+    align-items:end;
     align-content:center;
     justify-items:center;
     justify-content:center;
 }
+
+
 .content__carrusel{
-    width: 200px;
-    height: 200px;
+    width: 30vh;
+    height: 90%;
     border:10px solid var(--color-barras);
-    border-bottom: 34px solid var(--color-barras);
     border-radius: 10%;
     position: relative;
+    grid-column: 1;
 }
 
 .almuerzo{
+    grid-row: 1;
     background-image: url(../images/almuerzo/pexels-catscoming-1907244.jpg);  
     background-size:cover;
     background-position: center;
@@ -245,6 +113,7 @@ main{
 
 
 .desayuno{
+    grid-row: 2;
     background-image: url(../images/desayuno/pexels-ash-craig-122861-376464.jpg);
     background-size:cover ;
     background-position: center;
@@ -252,6 +121,7 @@ main{
     animation: desayuno 36s ease-out 2s infinite;
 }
 .cena{
+    grid-row: 3;
     background-image: url(../images/cena/pexels-andra-325634-918581.jpg);
     background-size:cover ;
     background-position: center;
@@ -319,6 +189,26 @@ main{
         background-image: url(../images/cena/pexels-yungsaac-2119758.jpg);
     }
 }
+@media screen and (min-width:800px){
+
+    .content__carrusel{
+        width: 20vw;
+        height: 19vw;
+        grid-row: 2;
+    }
+    .almuerzo{
+        align-self:flex-end;
+        grid-column: 1;
+    }
+    .desayuno{
+        grid-column: 2;
+        align-self:flex-end;
+    }
+    .cena{
+        grid-column: 3;
+        align-self:flex-end;
+    }
+}
 /* ************************************/
 /*                                    */
 /*        Ventana Modal de main       */
@@ -347,25 +237,23 @@ main{
 .boton__open{
     z-index:1;
     display: block;
-    position: absolute;
-    text-align: center;
     font-weight: bold;
-    width: 180px;
     border-radius: 0px 0px 19px 19px;
     background-color: var(--color-principal);
     border: 5px solid var(--color-barras);
-}
+    width: 30vh;
+    text-align: center;
+    grid-column: 1;
+} 
 .almuerzo-boton_open{
-    top: 23.9%;
-    left:12%
+    grid-row: 1;
 }
 .desayuno-boton_open{
-    top: 56.8%;
-    left:12%
+    grid-row: 2;
 }
 .cena-boton_open{
-    top: 90.3%;
-    left:12%
+    grid-row: 3;
+
 }
 .boton__close{
     z-index: 30;
@@ -510,360 +398,6 @@ main{
 
 
 
-
-@media screen and (min-width:250px) {
-    .boton__open{
-        width: 62.1%;
-        left: 19.1%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 57.1%;
-    }
-    .cena-boton_open{
-        top: 90.4%;
-    }
-}
-@media screen and (min-width:300px) {
-    .boton__open{
-        width: 59%;
-        left: 20.1%;
-    }
-    .almuerzo-boton_open{
-        top: 23.6%;
-    }
-    .desayuno-boton_open{
-        top: 57%;
-    }
-    .cena-boton_open{
-        top: 90.3%;
-    }
-}
-
-
-@media screen and (min-width:350px) {
-    .boton__open{
-        width: 52%;
-        left: 24.1%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:400px) {
-    .boton__open{
-        width: 44.9%;
-        left: 27.7%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.5%;
-    }
-}
-@media screen and (min-width:450px) {
-    .boton__open{
-        width: 40%;
-        left: 30.2%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-
-@media screen and (min-width:500px) {
-    .boton__open{
-        width: 37.9%;
-        left: 31.1%;
-    }
-    .almuerzo-boton_open{
-        top: 22.9%;
-    }
-    .desayuno-boton_open{
-        top: 55.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:550px) {
-    .boton__open{
-        width: 34.5%;
-        left: 32.8%;
-    }
-    .almuerzo-boton_open{
-        top: 23.9%;
-    }
-    .desayuno-boton_open{
-        top: 56.4%;
-    }
-    .cena-boton_open{
-        top: 89.7%;
-    }
-}
-@media screen and (min-width:600px) {
-    .boton__open{
-        width: 31.9%;
-        left: 34.1%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:650px) {
-    .boton__open{
-        width: 29.3%;
-        left: 35.3%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 55.8%;
-    }
-    .cena-boton_open{
-        top: 89.8%;
-    }
-}
-@media screen and (min-width:700px) {
-    .boton__open{
-        width: 27.3%;
-        left: 36.3%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-
-
-@media screen and (min-width:750px) {
-    .boton__open{
-        width: 25.3%;
-        left: 37.3%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:800px) {
-    .boton__open{
-        width: 24%;
-        left: 37.9%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 89.1%;
-    }
-}
-@media screen and (min-width:850px) {
-    .boton__open{
-        width: 22%;
-        left: 39%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 55.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:900px) {
-    .boton__open{
-        width: 21%;
-        left: 39.5%;
-    }
-    .almuerzo-boton_open{
-        top: 22.5%;
-    }
-    .desayuno-boton_open{
-        top: 55.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:950px) {
-    .boton__open{
-        width: 20%;
-        left: 40%;
-    }
-    .almuerzo-boton_open{
-        top: 23.5%;
-    }
-    .desayuno-boton_open{
-        top: 56.8%;
-    }
-    .cena-boton_open{
-        top: 90.1%;
-    }
-}
-@media screen and (min-width:1000px) {
-    main{
-        height: 70vh;
-    }
-    .content{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr;
-        height:100%;
-    }
-    .content__carrusel{
-        width: 20vw;
-        height: 20vw;
-    }
-    .boton__open{
-        width: 19%;
-        top: 59.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.5%;
-    }
-    .cena-boton_open{
-        left: 74%;
-    }
-}
-@media screen and (min-width:1000px) {
-    .boton__open{
-        width: 19%;
-        top: 60.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.5%;
-    }
-    .cena-boton_open{
-        left: 74%;
-    }
-}
-@media screen and (min-width:1150px) {
-    .boton__open{
-        width: 19%;
-        top: 62.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.5%;
-    }
-    .cena-boton_open{
-        left: 74%;
-    }
-}
-@media screen and (min-width:1300px) {
-    .boton__open{
-        width: 19%;
-        top: 64.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.5%;
-    }
-    .cena-boton_open{
-        left: 74%;
-    }
-}
-@media screen and (min-width:1450px) {
-    .boton__open{
-        width: 19%;
-        top: 66.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.5%;
-    }
-    .cena-boton_open{
-        left: 74%;
-    }
-}
-@media screen and (min-width:1600px) {
-    .boton__open{
-        width: 19.4%;
-        top: 68.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.3%;
-    }
-    .cena-boton_open{
-        left: 73.7%;
-    }
-}
-@media screen and (min-width:1800px) {
-    .boton__open{
-        width: 19.4%;
-        top: 70.8%;
-    }
-    .almuerzo-boton_open{
-        left: 7%;
-    }
-    .desayuno-boton_open{
-        left: 40.3%;
-    }
-    .cena-boton_open{
-        left: 73.7%;
-    }
-}
-
-
-
-
-
 .ventana__modal-content > h2,p{
     color: #FF0000; /* Rojo brillante */
     text-shadow: 
@@ -935,12 +469,6 @@ main{
 }
 .content__plato > input[type="checkbox"]:checked ~ .close{
     display: block;
-}
-
-footer{
-    grid-area: footer;
-    background-color: var(--color-barras);
-    height: 20vh;
 }
 
 
@@ -1015,6 +543,7 @@ footer{
         height: 120px;
     }
 }
+
 @media screen and (min-width:1000px) {
     .ventana__modal{
         overflow: hidden;
@@ -1041,5 +570,62 @@ footer{
     .content__plato>img{
         width: 160px;
         height: 150px;
+    }
+}
+
+@media screen and (min-width:800px){
+    
+    main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:  1fr 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .boton__open{
+        width: 20vw;
+        height: 3.4vh;
+        grid-row: 2;
+    }
+    .almuerzo-boton_open{
+        grid-column: 1;
+        align-self: flex-end;
+    }
+    .desayuno-boton_open{
+        grid-column: 2;
+        align-self: flex-end;
+
+    }
+    .cena-boton_open{
+        grid-column: 3;
+        align-self: flex-end;
+    }
+}
+
+
+
+@media screen and (min-width:1200px){
+    
+    main{
+        grid-template-rows:  1fr 1.4fr 1fr;
+    }
+}
+@media screen and (min-width:1400px){
+    
+    main{
+        grid-template-rows:  1fr 1.6fr 1fr;
+    }
+}
+@media screen and (min-width:1600px){
+    
+    main{
+        grid-template-rows:  1fr 1.8fr 1fr;
+    }
+}
+@media screen and (min-width:1800px){
+    
+    main{
+        grid-template-rows:  1fr 2fr 1fr;
     }
 }

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waldonald's</title>
     <link rel="stylesheet" href="assents/css/styles.css">
-    <link rel="icon" href="../../../IMG/icono-web 2.png">
+    <link rel="icon" href="assents/images/icono-web 2.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
-<body>
+<body >
     <div class="grid">        
         <header class="header">
             <!------------------------------------------------------------------->
@@ -37,7 +37,8 @@
 
         </header>
         <main class="main">
-            <div class="animation animation__step-1">
+            <div id="step_1" class="animation animation__step-1">
+                <button class="ida"><a class="material-symbols-outlined" href="#step_2">keyboard_double_arrow_down</a></button>
                 <h2 class="animation__title">Waldonald's Un Universo</h2>
                 <div class="animation__icons">
                     <div>
@@ -66,9 +67,10 @@
                     </div>
                 </div>
             </div>
-
-            <div class="animation animation__step-2">
-                <h2 class="animation__title">Variedad</h2>
+            <div id="step_2" class="animation animation__step-2">
+                <button class="vuelta"><a class="material-symbols-outlined" href="#step_1">keyboard_double_arrow_up</a></button>
+                <button class="ida"><a class="material-symbols-outlined" href="#step_3">keyboard_double_arrow_down</a></button>
+                <h2  class="animation__title">Variedad</h2>
                 <div class="animation__content">
                     <img class="principal" src="assents/images/iconos-comida/Imagen2.png" alt="">
                     <img class="rotate rotate_1" src="assents/images/iconos-comida/pizza.png" alt="">
@@ -84,20 +86,40 @@
                 </div>
             </div>
 
-            <div class="animation animation__step-3">
+            <div id="step_3" class="animation animation__step-3">
+                <button class="vuelta"><a class="material-symbols-outlined" href="#step_2">keyboard_double_arrow_up</a></button>
+                <button class="ida"><a class="material-symbols-outlined" href="#step_4">keyboard_double_arrow_down</a></button>
                 <h2>Rapidez</h2>
-                <img class="dron_1" src="https://media.tenor.com/SsN_iw5_OlAAAAAi/%D0%B0%D1%8D%D1%80%D0%BE%D1%81%D1%8A%D0%B5%D0%BC%D0%BA%D0%B0-%D0%B4%D1%80%D0%BE%D0%BD.gif" alt="">
-                <img class="dron_2" src="https://media.tenor.com/SsN_iw5_OlAAAAAi/%D0%B0%D1%8D%D1%80%D0%BE%D1%81%D1%8A%D0%B5%D0%BC%D0%BA%D0%B0-%D0%B4%D1%80%D0%BE%D0%BD.gif" alt="">
-                <img class="dron_3" src="https://media.tenor.com/SsN_iw5_OlAAAAAi/%D0%B0%D1%8D%D1%80%D0%BE%D1%81%D1%8A%D0%B5%D0%BC%D0%BA%D0%B0-%D0%B4%D1%80%D0%BE%D0%BD.gif" alt="">
+                <img class="dron_1" src="assents/images/dron.gif" alt="">
+                <img class="dron_2" src="assents/images/dron.gif" alt="">
+                <img class="dron_3" src="assents/images/dron.gif" alt="">
             </div>
-            <div class="animation animation__step-4">
-                <h2>Animacion 4</h2>
-            </div>
-            <div class="animation animation__step-5">
-                <h2>Animacion 5</h2>
+            <div id="step_4" class="animation animation__step-4">
+                <button class="vuelta"><a class="material-symbols-outlined" href="#step_3">keyboard_double_arrow_up</a></button>
+                <div class="techo">
+                    <h2>Atencion</h2>
+                </div>
+                <div class="pared"></div>
+                <div class="pared-2"></div>
+                <div class="mesa"></div>
+                <div class="piso"></div>
+                <img class="empleado" src="assents/images/servicio-al-cliente.png" alt="">
+                <img class="cliente" src="assents/images/consumidor-2.png" alt="">
+                <div class="dialogo-1">
+                    <p class="texto">Buenos Dias :)</p>
+                </div>
+                <div class="dialogo-2">
+                    <p class="texto">anashee</p>
+                </div>
             </div>
         </main>
-        <footer>
+        <footer class="footer">
+            <div class="img"><a href="coming-soon.html" target="_blank">o</a></div>
+            <div class="img"><a href="coming-soon.html" target="_blank">o</a></div>
+            <div class="img"><a href="coming-soon.html" target="_blank">o</a></div>
+            <div class="img"><a href="coming-soon.html" target="_blank">o</a></div>
+            <div class="img"><a href="coming-soon.html" target="_blank">o</a></div>
+            <div class="img"><a href="coming-soon.html" target="_blank">o</a></div>
         </footer>
     </div>
 </body>
