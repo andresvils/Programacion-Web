@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+:root{
+    --color-principal:#b17f15c5;
+    --color-secundario: #49474e;
+    --color-texto:#fff;
+    --fuente-texto:'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
+body,header,main,aside,footer,div,input,button,form,dialog,ul,ol,li,nav,h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3fr);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+.header{
+    container-name: header;
+    container-type: inline-size;
+    grid-area: header;
+    font-family: var(--fuente-texto);
+    border-radius: 10px;
+}
+.header__nav{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.header__nav_logo-boton{
+    background-color: var(--color-principal);
+    border: 5px solid var(--color-secundario);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1%;
+}
+.nav_icono{
+    width: 15vw;
+    padding: 10px;
+    max-width: 54px;
+    min-width: 54px;
+}
+.nav_boton{
+    font-size: 2rem !important;
+    font-weight: bold;
+    padding: 0.5px;
+    color:var(--color-texto);
+
+    border-radius: 10px;
+}
+.header__nav_opciones{
+    background-color: var(--color-principal);
+    border: 5px solid var(--color-secundario);
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:2vw;
+    padding: 2% 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+.nav_opcion{
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.nav_opcion>a{
+    font-size: 1.4rem;
+    color: var(--color-texto);
+    font-weight: bold;
+    text-decoration: none;
+}
+@container header (min-width:720px){
+    .header__nav{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-principal);
+        border:5px solid var(--color-secundario);
+    }
+    .header__nav_logo-boton{
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_boton{
+        display: none !important;
+    }
+    .header__nav_opciones{
+        display: flex !important;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        gap: 5vw;
+        padding: 0px 5vw;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,22 @@
+@import url(global.css);
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3fr);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.main{
+    grid-area: main;
+}
+.aside{
+    background-color: var(--color-secundario);
+    grid-template-areas: 
+    "titulo"
+    "contenido"
+    "total";
+}
