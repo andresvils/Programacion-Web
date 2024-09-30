@@ -1,0 +1,29 @@
+body{
+    color: #333;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+input{
+    display: block;
+    width: 98%;
+    padding: 6px;
+    margin:12px  auto;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    border-top: 2px solid #666
+}
+input::placeholder{
+    color: #f00;
+}
+input[type="submit"]{
+    width: 50%;
+    margin-top: 18px;
+    padding: 9px;
+}
+form{
+    width: 86%;
+    margin: auto;
+    background-color: #000;
+    padding: 30px;
+}
