@@ -8,11 +8,13 @@
     <link rel="icon" href="../../../IMG/OIP.png">
 </head>
 <body>
-    <form action="">
-        <input type="text" placeholder="Nombre Completo" id="nombre">
-        <input type="email" placeholder="Email" id="email">
-        <input type="text" placeholder="Materia Adeudada" id="materia">
+    <form autocomplete="off">
+        <h2>INSCRIPCION DE MATERIAS ADEUDADAS</h2>
+        <input type="text" placeholder="Nombre Completo" id="nombre" required>
+        <input type="text" placeholder="Email" id="email" required>
+        <input type="text" placeholder="Materia Adeudada" id="materia" required>
         <input type="submit" value="Solicitar Mesa" id="btn-enviar">
+        <div class="resultado"></div>
     </form>
     <script src="script.js"></script>
 </body>
