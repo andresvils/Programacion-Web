@@ -13,13 +13,13 @@
         <header class="header">
             <nav class="header__nav">
                 <div class="header__nav_logo-boton">
-                    <img class="nav_icono" src="assents/img/reciclar-senal.png" alt="">
+                    <img class="nav_icono" src="assents/img/bolsa-de-la-compra.png" alt="">
                     <input id="boton-nav" type="checkbox">
                     <label class="nav_boton material-symbols-outlined"for="boton-nav">menu</label>
                 </div>
                 <ul class="header__nav_opciones">
-                    <li class="nav_opcion"><a href="#">Inicio</a></li>
-                    <li class="nav_opcion"><a href="#">Productos</a></li>
+                    <li class="nav_opcion"><a href="index.html">Inicio</a></li>
+                    <li class="nav_opcion"><a href="productos.html">Productos</a></li>
                     <li class="nav_opcion"><a href="#">Sucursales</a></li>
                     <li class="nav_opcion"><a href="#">Cuenta</a></li>
                 </ul>
@@ -30,7 +30,36 @@
         </aside>
         <main class="main">
             <section class="main__section">
+                <div class="main__section-modal_config">
+                    <div>
+                        <h3>Opciones</h3>
+                        <button id="add">Agregar Producto</button>
+                        <button>Eliminar Producto</button>
+                        <button>Editar Producto</button>
+                        <button class="modal_config-salir">X</button>
+                    </div>
+                </div>
+                <div class="modal__config-add">
+                    <h3>Agregar Producto</h3>
+                    <label for="">Nombre del Producto</label>
+                    <input id="nombre" type="text" required>
+                    <label for="">Precio en $</label>
+                    <input type="text" id="precio" required>
+                    <button id="crear-producto">Crear</button>
 
+                    <button class="modal_config-salir salir-add">X</button>
+                </div>
+                <div class="main__section-titulo">
+                    <input class="main__section-buscar" type="text" placeholder="Buscar">
+                    <select class="main__section-filtro" name="" id="">
+                        <option value="">Predeterminado</option>
+                        <option value="">Precio</option>
+                        <option value="">A-Z</option>
+                        <option value="">Popularidad</option>
+                    </select>
+                    <label class="main__section-config"for="boton-config">Config</label>
+                </div>
+                <div class="main__section-productos"></div>
             </section>
         </main>
     </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 :root{
-    --color-principal:#b17f15c5;
-    --color-secundario: #49474e;
+    --color-principal:#81e7c5;
+    --color-secundario: hsla(150, 67%, 4%, 0.773);
     --color-texto:#fff;
     --fuente-texto:'Poppins', sans-serif;
 }
@@ -9,7 +9,7 @@
     box-sizing: border-box;
     user-select: none;
 }
-body,header,main,aside,footer,div,input,button,form,dialog,ul,ol,li,nav,h1,h2,h3,h4{
+body,header,main,aside,footer,div,input,button,form,dialog,ul,ol,li,nav,h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
@@ -38,12 +38,12 @@ input[type="checkbox"]{
 }
 .header__nav_logo-boton{
     background-color: var(--color-principal);
-    border: 5px solid var(--color-secundario);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 1%;
+    padding:.6rem  0.4rem;
+
 }
 .nav_icono{
     width: 15vw;
@@ -61,7 +61,6 @@ input[type="checkbox"]{
 }
 .header__nav_opciones{
     background-color: var(--color-principal);
-    border: 5px solid var(--color-secundario);
     display: none;
     flex-flow: column nowrap;
     justify-content: center;
@@ -76,12 +75,33 @@ input[type="checkbox"]{
     text-align: center;
     width: 100%;
     height: 100%;
+    &:hover{
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+    }
+
+}
+.nav_opcion::after{
+    content: "";
+    width: 10%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.nav_opcion::before{
+
 }
 .nav_opcion>a{
     font-size: 1.4rem;
     color: var(--color-texto);
     font-weight: bold;
     text-decoration: none;
+    z-index: 4;
+    filter: drop-shadow(0px 0px 1px rgb(111, 109, 109));
 }
 @container header (min-width:720px){
     .header__nav{
@@ -89,7 +109,6 @@ input[type="checkbox"]{
         justify-content: space-between;
         align-items: center;
         background-color: var(--color-principal);
-        border:5px solid var(--color-secundario);
     }
     .header__nav_logo-boton{
         border: none;
