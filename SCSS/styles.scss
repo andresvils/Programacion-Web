@@ -1,0 +1,32 @@
+
+$principal:rgb(11, 238, 208);
+$secundario:rgb(59, 253, 11);
+@mixin base-buton($color:white){
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.2rem 1.3rem;
+    width: fit-content;
+    background-color: $color;
+}
+body{
+    h1{
+        color: $principal;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+    h2{
+        color: $secundario;
+        font-size: 4rem;
+    }
+    .btn-1{
+        @include base-buton($color:black);
+
+    }
+    .btn-2{
+        @include  base-buton($color:green)
+    }
+    .btn-3{
+        @include  base-buton($color:yellow)
+    }
+}

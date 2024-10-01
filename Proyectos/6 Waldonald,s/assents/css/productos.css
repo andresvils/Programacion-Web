@@ -585,7 +585,7 @@ main{
     
     .boton__open{
         width: 20vw;
-        height: 3.4vh;
+        height: 3vW;
         grid-row: 2;
     }
     .almuerzo-boton_open{
