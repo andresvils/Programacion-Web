@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <style>
+        body{
+            color: #222;
+            font-family: sans-serif;
+        }
+        .texto{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        "strict mode";
+        let arr = ["manzana","pera","banana"];
+        let arr2 = ["kiwi","naranja","kiwi","naranja","kiwi","naranja","kiwi","naranja","kiwi","naranja","kiwi","naranja"]
+        let arr3 =[...arr,...arr2];
+        arr.push(...arr2)
+        console.log(arr);
+        console.log(arr3)
+    </script>
+</body>
+</html>

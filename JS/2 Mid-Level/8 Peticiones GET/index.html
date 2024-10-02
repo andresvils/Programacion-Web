@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticiones</title>
+</head>
+<body>
+    <script>
+        let peticion;
+        if(window.XMLHttpRequest) peticion = new XMLHttpRequest();
+        else peticion = new ActiveXObject("Microsoft.XMLHTTP");
+
+        peticion.addEventListener("load",()=>{
+            let respuesta;
+            if(peticion.status==200) respuesta = peticion.response;
+            else respuesta = "Lo Siento,no se ha encontrado el recurso"
+            console.log(JSON.parse(respuesta))
+        })
+        peticion.open("GET","https://reqres.in/api/users?page=2");
+        peticion.send();
+    </script>
+</body>
+</html>

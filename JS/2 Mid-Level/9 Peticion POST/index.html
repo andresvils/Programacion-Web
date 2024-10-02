@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticiones</title>
+</head>
+<body>
+    <script>
+        let peticion;
+        if(window.XMLHttpRequest) peticion = new XMLHttpRequest();
+        else peticion = new ActiveXObject("Microsoft.XMLHTTP");
+
+        peticion.addEventListener("load",()=>{
+            let respuesta;
+            if(peticion.status==200 ||peticion.status==201) respuesta = peticion.response;
+            else respuesta = "Lo Siento ,no se ha encontrado el recurso"
+            console.log(respuesta)
+        })
+        peticion.open("POST","https://reqres.in/api/users");
+        peticion.setRequestHeader("Content-type","application/json;charset=UTF8")
+        peticion.send(JSON.stringify({
+            "name": "morpheus",
+            "job": "leader"
+        }));
+    </script>
+</body>
+</html>

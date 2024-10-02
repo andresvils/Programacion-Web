@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fech</title>
+</head>
+<body>
+    <script>
+        fetch("https://reqres.in/api/users?page=2")
+            .then(res=>res.text())
+            .then(res=>console.log(JSON.parse(res)))
+
+        let headers={
+        method : "POST",
+        body :`{"nombre":"santiago","apellido":"vilchez"}`,                         //body : JSON.stringify({
+        headers:{"Content-type":"application/json"}                                 //    "nombre":"santiago",
+        }                                                                               //    "apellido":"vilchez"
+        fetch("https://reqres.in/api/users",headers).then(res=>res.json())              //}),
+            .then(res=>console.log(res))  
+    </script>
+</body>
+</html>

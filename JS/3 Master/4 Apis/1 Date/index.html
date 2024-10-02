@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apis</title>
+    <style>
+        body{
+            color: #222;
+            font-family: sans-serif;
+        }
+        .reloj{
+            background: linear-gradient(#111,#777);
+            border:2px solid #000;
+            display: inline-flex;
+            border-radius: 5px;
+        }
+        .reloj div{
+            color: #fff;
+            padding: 5px 7px;
+            font-size: 20px;
+            font-family: monospace;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="reloj">
+        <div class="hora">00</div>
+        <div class="minutos">00</div>
+        <div class="segundos">00</div>
+    </div>
+    <script>
+        "use strict";
+        const fecha = new Date();
+        console.log("Dia del Mes "+fecha.getDate())
+        console.log("Numero del la semana "+fecha.getDay())
+        console.log("Numero del Mes "+fecha.getMonth())
+        console.log("Numero del Año "+fecha.getFullYear())
+        console.log("hora  "+fecha.getHours())
+        console.log("minutos  "+fecha.getMinutes())
+        console.log("segundos "+fecha.getSeconds())
+        const addZeros = n =>{
+            if(n.toString().lenght<2) return "0".concat(n);
+            return n;
+        }
+        const actualizarHora=()=>{
+            const time = new Date();
+            let hora = addZeros(time.getHours());
+            let minutos = addZeros(time.getMinutes());
+            let segundos = addZeros(time.getSeconds());
+            document.querySelector(".hora").textContent = hora;
+            document.querySelector(".minutos").textContent = minutos;
+            document.querySelector(".segundos").textContent = segundos;
+        }
+        actualizarHora()
+        setInterval(actualizarHora,1000)
+    </script>
+</body>
+</html>
